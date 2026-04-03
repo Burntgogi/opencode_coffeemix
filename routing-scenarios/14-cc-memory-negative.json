@@ -1,0 +1,7 @@
+{
+  "name": "cc-memory-negative",
+  "prompt": "In this workspace, which specialist should handle a concise runtime, config, and working-directory status snapshot? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["cc-memory"],
+  "max_lines": 5
+}

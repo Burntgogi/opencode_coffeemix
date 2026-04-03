@@ -1,0 +1,7 @@
+{
+  "name": "cc-worktree-positive",
+  "prompt": "In this workspace, which specialist should handle creating and managing git worktrees for parallel branch work? Answer with one agent name only.",
+  "must_include": ["cc-worktree"],
+  "must_exclude": [],
+  "max_lines": 5
+}

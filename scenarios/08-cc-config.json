@@ -1,0 +1,7 @@
+{
+  "name": "cc-config",
+  "prompt": "You are the cc-config agent. Review this sandbox config situation: opencode.json loads oh-my-opencode plugin, oh-my-opencode.json defines cc-* agents, local Qwen providers exist but are not primary runtime. Return Effective configuration, Overrides, Risks, Recommendation.",
+  "must_include": ["effective", "risks", "recommendation"],
+  "must_exclude": ["effective configuration unknown"],
+  "max_lines": 35
+}

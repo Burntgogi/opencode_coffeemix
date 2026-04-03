@@ -1,0 +1,7 @@
+{
+  "name": "cc-doctor-negative",
+  "prompt": "In this workspace, which specialist should handle extracting durable memory from a session snapshot? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["cc-doctor"],
+  "max_lines": 5
+}

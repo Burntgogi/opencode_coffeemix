@@ -1,0 +1,7 @@
+{
+  "name": "cc-teleport-negative",
+  "prompt": "In this workspace, which specialist should handle conventional commit message crafting and staging guidance? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["cc-teleport"],
+  "max_lines": 5
+}

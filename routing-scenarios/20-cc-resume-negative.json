@@ -1,0 +1,7 @@
+{
+  "name": "cc-resume-negative",
+  "prompt": "In this workspace, which specialist should handle a concise runtime/config status snapshot? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["cc-resume"],
+  "max_lines": 5
+}

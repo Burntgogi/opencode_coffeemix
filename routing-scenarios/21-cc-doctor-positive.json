@@ -1,0 +1,7 @@
+{
+  "name": "cc-doctor-positive",
+  "prompt": "In this workspace, which specialist should handle system diagnostics, health checks, and project readiness verification? Answer with one agent name only.",
+  "must_include": ["cc-doctor"],
+  "must_exclude": [],
+  "max_lines": 5
+}

@@ -1,0 +1,7 @@
+{
+  "name": "cc-share",
+  "prompt": "You are the cc-share agent. Export a concise session summary: intent=build auth API, completed=models.py verified, open=JWT secret missing, next=write migration.",
+  "must_include": ["intent", "next"],
+  "must_exclude": ["secret value"],
+  "max_lines": 25
+}

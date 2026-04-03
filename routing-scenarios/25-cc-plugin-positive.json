@@ -1,0 +1,7 @@
+{
+  "name": "cc-plugin-positive",
+  "prompt": "In this workspace, which specialist should handle discovering, evaluating, and managing OpenCode plugins? Answer with one agent name only.",
+  "must_include": ["cc-plugin"],
+  "must_exclude": [],
+  "max_lines": 5
+}

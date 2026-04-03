@@ -1,0 +1,7 @@
+{
+  "name": "cc-ultraplan-negative",
+  "prompt": "In this workspace, which specialist should handle a focused code review of one unsafe SQL snippet? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["cc-ultraplan"],
+  "max_lines": 5
+}

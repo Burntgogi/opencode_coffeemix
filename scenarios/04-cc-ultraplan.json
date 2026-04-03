@@ -1,0 +1,7 @@
+{
+  "name": "cc-ultraplan",
+  "prompt": "You are the cc-ultraplan agent. Plan a 3-phase migration from local auth to JWT auth across models.py, auth.py, api.py, and tests. Include dependencies and risks.",
+  "must_include": ["phase", "dependencies", "risk"],
+  "must_exclude": ["10 phases"],
+  "max_lines": 140
+}
