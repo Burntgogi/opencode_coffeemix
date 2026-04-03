@@ -1,4 +1,4 @@
-# Evidence — Integration Guide Self-Audit
+# Evidence —Integration Guide Self-Audit
 
 **Date**: 2026-04-02
 
@@ -23,17 +23,17 @@ was audited inside the live mix sandbox using a file-reading self-audit prompt.
 
 ## Main audit conclusion
 
-The guide is now strong on **architecture correctness**, but only **partially complete operationally**, and still not fully sufficient as a “trust blindly and execute” migration playbook.
+The guide is now strong on **architecture correctness**, but only **partially complete operationally**, and still not fully sufficient as a ?�trust blindly and execute—migration playbook.
 
 ## Strengths confirmed
 - OMO remains the control plane.
 - Claude Code remains reference-only.
 - Runtime/validation/archive separation is explained.
 - The decision rubric and authority/precedence rules are useful.
-- The live workspace matches the guide’s stated architecture closely.
+- The live workspace matches the guide?�s stated architecture closely.
 
 ## Missing or weak areas confirmed
-- Routing awareness is now fully covered for all 14 `cc-*` specialists through identity-prompt scenarios.
+- Routing awareness is now fully covered for all 14 `gb-*` specialists through identity-prompt scenarios.
 - The remaining gap is that these scenarios prove identity-level routing, not ambiguous or multi-step task routing.
 - Some validation coverage is indirect or inherited from prior sandbox work.
 - Skill validation is still weaker than agent validation.

@@ -1,4 +1,4 @@
-# Session Wrap-up — Phase 1
+# Session Wrap-up —Phase 1
 
 **Date**: 2026-04-02  
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`
@@ -17,21 +17,21 @@ That objective was achieved.
 - entry scripts: `open-sandbox-opencode.cmd`, `enter-sandbox.ps1`, `exit-sandbox.ps1`
 
 ### CoffeeMix specialist surface
-Implemented `cc-*` specialists:
-- `cc-commit`
-- `cc-review`
-- `cc-compact`
-- `cc-worktree`
-- `cc-resume`
-- `cc-doctor`
-- `cc-memory`
-- `cc-config`
-- `cc-share`
-- `cc-statusline`
-- `cc-bughunter`
-- `cc-ultraplan`
-- `cc-teleport`
-- `cc-plugin`
+Implemented `gb-*` specialists:
+- `gb-commit`
+- `gb-review`
+- `gb-compact`
+- `gb-worktree`
+- `gb-resume`
+- `gb-doctor`
+- `gb-memory`
+- `gb-config`
+- `gb-share`
+- `gb-statusline`
+- `gb-debug`
+- `gb-ultraplan`
+- `gb-teleport`
+- `gb-plugin`
 
 ### CoffeeMix skills
 - `enter-plan-mode`
@@ -41,7 +41,7 @@ Implemented `cc-*` specialists:
 
 ### UI marker
 - subtle startup badge via `.opencode/plugins/coffeemix_all-badge.tsx`
-- visible as `☕ With_coffeemix_all`
+- visible as `—With_coffeemix_all`
 
 ## 3. What was validated
 
@@ -50,32 +50,32 @@ Report:
 - `reports/sandbox-smoke-report.md`
 
 Observed pass:
-- `cc-review`
-- `cc-share`
-- `cc-statusline`
+- `gb-review`
+- `gb-share`
+- `gb-statusline`
 
 ### Stricter e2e validation
 Report:
 - `reports/sandbox-e2e-report.md`
 
 Observed pass:
-- `cc-commit`
-- `cc-review`
-- `cc-bughunter`
-- `cc-ultraplan`
-- `cc-teleport`
-- `cc-plugin`
-- `cc-memory`
-- `cc-config`
-- `cc-share`
-- `cc-statusline`
+- `gb-commit`
+- `gb-review`
+- `gb-debug`
+- `gb-ultraplan`
+- `gb-teleport`
+- `gb-plugin`
+- `gb-memory`
+- `gb-config`
+- `gb-share`
+- `gb-statusline`
 
 ### Routing validation
 Report:
 - `reports/routing-validation-report.md`
 
 Observed pass:
-- positive routing for `cc-review`, `cc-bughunter`, `cc-ultraplan`
+- positive routing for `gb-review`, `gb-debug`, `gb-ultraplan`
 - negative routing checks proving no obvious over-routing for adjacent tasks
 
 ## 4. Key architectural decisions
@@ -101,8 +101,8 @@ Observed pass:
 Key documents:
 - `docs/evidence-coffeemix_all-scaffold.md`
 - `docs/evidence-coffeemix_all-runtime-validation.md`
-- `docs/evidence-cc-teleport-fix.md`
-- `docs/evidence-cc-review-fix.md`
+- `docs/evidence-gb-teleport-fix.md`
+- `docs/evidence-gb-review-fix.md`
 - `docs/evidence-routing-validation.md`
 - `docs/evidence-integration-guide-self-audit.md`
 - `docs/omo-claudecode-integration-guide.md`
@@ -121,6 +121,6 @@ The mix sandbox is now:
 
 Phase 2 should focus on one of these:
 
-1. extend routing validation across the remaining `cc-*` specialists,
+1. extend routing validation across the remaining `gb-*` specialists,
 2. add deeper skill validation for non-agent behavior,
 3. begin controlled adoption planning for selected CoffeeMix features outside the sandbox.

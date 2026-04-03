@@ -27,7 +27,7 @@ It is grounded in:
 Current role:
 
 - keeps OMO as the control plane,
-- prefers `cc-*` specialists for exact-match work,
+- prefers `gb-*` specialists for exact-match work,
 - treats this workspace as sandbox-only,
 - tells the agent to read live sandbox files instead of relying on memory.
 
@@ -47,7 +47,7 @@ Neither file currently expresses the missing discipline layer directly.
 
 If the future skills from `07` are adopted, `AGENTS.md` may eventually need to reflect that in policy language.
 
-### Reflection area A — stronger discipline-first wording
+### Reflection area A —stronger discipline-first wording
 
 Potential future reflection:
 
@@ -59,7 +59,7 @@ Why:
 - current local policy is strong on specialist routing,
 - weaker on mandatory cross-task discipline.
 
-### Reflection area B — explicit relationship between specialists and discipline skills
+### Reflection area B —explicit relationship between specialists and discipline skills
 
 Potential future reflection:
 
@@ -71,7 +71,7 @@ Why:
 
 - this keeps the CoffeeMix structure intact while improving rigor.
 
-### Reflection area C — stronger evidence-before-completion expectation
+### Reflection area C —stronger evidence-before-completion expectation
 
 Potential future reflection:
 
@@ -83,7 +83,7 @@ Why:
 - current docs already imply this pattern,
 - but the routing policy does not yet foreground it as a system-wide expectation.
 
-### Reflection area D — debugging escalation language
+### Reflection area D —debugging escalation language
 
 Potential future reflection:
 
@@ -100,7 +100,7 @@ Why:
 
 This file is the current local model-routing authority, so any future reflection here must remain conservative.
 
-### Reflection area A — ensure future skill-bearing workflows align with current categories
+### Reflection area A —ensure future skill-bearing workflows align with current categories
 
 Potential future question:
 
@@ -111,18 +111,18 @@ Current answer:
 
 - likely yes for now; the current category matrix already looks sufficient.
 
-### Reflection area B — consider whether any new named agents are actually necessary
+### Reflection area B —consider whether any new named agents are actually necessary
 
 Potential future question:
 
-- does adoption require new `cc-*` agents,
+- does adoption require new `gb-*` agents,
 - or do the new local skills sit on top of the current agents?
 
 Current answer:
 
 - the current docs suggest **skills first**, not new agents first.
 
-### Reflection area C — consider whether agent descriptions need future alignment
+### Reflection area C —consider whether agent descriptions need future alignment
 
 Potential future question:
 
@@ -132,7 +132,7 @@ Current answer:
 
 - possibly, but not before the skills and evidence model are stable.
 
-### Reflection area D — optional plugin/bootstrap relationship
+### Reflection area D —optional plugin/bootstrap relationship
 
 Potential future question:
 

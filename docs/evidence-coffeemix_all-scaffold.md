@@ -1,4 +1,4 @@
-# Evidence — opencode_coffeemix_all_sandbox Scaffold
+# Evidence —opencode_coffeemix_all_sandbox Scaffold
 
 **Date**: 2026-04-02
 
@@ -33,7 +33,7 @@ Created a cleaner upstream-style sandbox scaffold at:
 ## Active runtime content moved
 
 Moved/copied into runtime surface:
-- 14 CoffeeMix `cc-*` agents into `.opencode/agents/`
+- 14 CoffeeMix `gb-*` agents into `.opencode/agents/`
 - active skills into `.opencode/skills/`
 - CoffeeMix startup badge plugin into `.opencode/plugins/`
 - TUI plugin path updated to `.opencode/plugins/coffeemix_all-badge.tsx`
@@ -61,8 +61,8 @@ Executed a file-based inventory check under:
 `OPENCODE_CONFIG_DIR=C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`
 
 Observed result:
-- 14 `cc-*` agents found in `oh-my-opencode.json`
-- the same 14 `cc-*` agents found in `.opencode/agents/`
+- 14 `gb-*` agents found in `oh-my-opencode.json`
+- the same 14 `gb-*` agents found in `.opencode/agents/`
 - counts are consistent across config and file layout
 
 ## Conclusion

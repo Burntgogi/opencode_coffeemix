@@ -16,7 +16,7 @@ This analysis is grounded in these local files:
 - `oh-my-opencode.json`
 - `opencode.json`
 - `tui.json`
-- `.opencode/agents/cc-*.md`
+- `.opencode/agents/gb-*.md`
 - `.opencode/skills/*/SKILL.md`
 - `.opencode/plugins/coffeemix_all-badge.tsx`
 - `docs/omo-claudecode-integration-guide.md`
@@ -85,12 +85,12 @@ Superpowers is strongest in four areas:
 | Plan-before-change gate | Hard-gated via brainstorming/writing-plans | Present but lighter | Medium | `enter-plan-mode` exists, but does not equal full brainstorming + tiny-task planning system |
 | TDD enforcement | Explicit Iron Law | Missing as dedicated local skill | High | No local TDD skill or equivalent hard rule file |
 | Verification-before-completion | Explicit Iron Law | Partial | High | Evidence culture exists in docs, but no dedicated completion-verification skill |
-| Systematic debugging | Explicit root-cause skill | Partial | Medium | `cc-bughunter` is strong, but there is no reusable local debugging skill/gate |
+| Systematic debugging | Explicit root-cause skill | Partial | Medium | `gb-debug` is strong, but there is no reusable local debugging skill/gate |
 | Automatic bootstrap injection | Plugin + hook implementation | Missing | High | Local sandbox loads `oh-my-opencode` only; no local superpowers-like bootstrap plugin |
-| Review loop after task completion | Present via review-oriented skills/agents | Partial | Medium | `cc-review` exists, but not wired as a mandatory stage after each task |
-| Worktree discipline | Present as skill | Partial | Medium | `cc-worktree` exists, but lacks superpowers-style safety choreography |
-| Session compaction / resume / handoff | Present | Present | Low | Local CoffeeMix is stronger here via `cc-compact`, `cc-resume`, `cc-memory`, `cc-share` |
-| Config/plugin inspection | Limited | Present | Low | Local CoffeeMix has richer operational specialists like `cc-config`, `cc-plugin`, `cc-doctor` |
+| Review loop after task completion | Present via review-oriented skills/agents | Partial | Medium | `gb-review` exists, but not wired as a mandatory stage after each task |
+| Worktree discipline | Present as skill | Partial | Medium | `gb-worktree` exists, but lacks superpowers-style safety choreography |
+| Session compaction / resume / handoff | Present | Present | Low | Local CoffeeMix is stronger here via `gb-compact`, `gb-resume`, `gb-memory`, `gb-share` |
+| Config/plugin inspection | Limited | Present | Low | Local CoffeeMix has richer operational specialists like `gb-config`, `gb-plugin`, `gb-doctor` |
 
 ---
 
@@ -113,7 +113,7 @@ These local strengths should remain primary:
 
 1. **OMO as the control plane** from `AGENTS.md`
 2. **CoffeeMix specialist routing** instead of forcing a superpowers-native runtime model
-3. **Existing operational specialists** (`cc-doctor`, `cc-config`, `cc-memory`, `cc-resume`, `cc-share`, `cc-compact`)
+3. **Existing operational specialists** (`gb-doctor`, `gb-config`, `gb-memory`, `gb-resume`, `gb-share`, `gb-compact`)
 4. **Model/category routing** from `oh-my-opencode.json`
 5. **Local sandbox-first validation pattern** already documented in `docs/omo-claudecode-integration-guide.md`
 
@@ -149,7 +149,7 @@ Only after the discipline content exists locally, decide whether to add:
 
 ### Priority 4: mandatory review sequencing
 
-Define when `cc-review`, `cc-bughunter`, and `cc-worktree` should be mandatory stages rather than optional specialists.
+Define when `gb-review`, `gb-debug`, and `gb-worktree` should be mandatory stages rather than optional specialists.
 
 ---
 

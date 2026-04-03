@@ -15,7 +15,7 @@
 
 ---
 
-## 2. Diagram A — document relationship map
+## 2. Diagram A —document relationship map
 
 ```mermaid
 graph TD
@@ -46,7 +46,7 @@ Relevant docs:
 
 ---
 
-## 3. Diagram B — workflow lifecycle
+## 3. Diagram B —workflow lifecycle
 
 ```mermaid
 flowchart TD
@@ -70,7 +70,7 @@ flowchart TD
 
 ---
 
-## 4. Diagram C — local rollout structure
+## 4. Diagram C —local rollout structure
 
 ```mermaid
 graph TD
@@ -110,22 +110,22 @@ This diagram is derived from:
 
 ---
 
-## 5. Diagram D — capability-to-file crosswalk
+## 5. Diagram D —capability-to-file crosswalk
 
 ```mermaid
 graph LR
     P[Planning Gate] --> P1[enter-plan-mode]
     D[Dangerous Action Confirmation] --> D1[ask-user-question]
-    B[Root Cause Debugging] --> B1[cc-bughunter]
+    B[Root Cause Debugging] --> B1[gb-debug]
     B --> B2[systematic-debugging (implemented)]
-    R[Review and Signoff] --> R1[cc-review]
-    H[Verification and Health Checks] --> H1[cc-doctor]
+    R[Review and Signoff] --> R1[gb-review]
+    H[Verification and Health Checks] --> H1[gb-doctor]
     H --> H2[verification-before-completion (implemented)]
     T[TDD Discipline] --> T1[test-driven-development (implemented)]
-    C[Session Continuity] --> C1[cc-compact]
-    C --> C2[cc-resume]
-    C --> C3[cc-memory]
-    C --> C4[cc-share]
+    C[Session Continuity] --> C1[gb-compact]
+    C --> C2[gb-resume]
+    C --> C3[gb-memory]
+    C --> C4[gb-share]
 ```
 
 ### Meaning
@@ -136,7 +136,7 @@ graph LR
 
 ---
 
-## 6. Diagram E — phased rollout view
+## 6. Diagram E —phased rollout view
 
 ```mermaid
 flowchart TD

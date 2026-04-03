@@ -18,7 +18,7 @@
 
 | Local file | State | Role in rollout |
 |---|---|---|
-| `AGENTS.md` | Reference / later refine | Keeps OMO as control plane and prefers `cc-*` specialists; future place to reinforce discipline-routing expectations |
+| `AGENTS.md` | Reference / later refine | Keeps OMO as control plane and prefers `gb-*` specialists; future place to reinforce discipline-routing expectations |
 | `oh-my-opencode.json` | Keep | Agent and category model bindings; should remain the central routing/model matrix |
 | `opencode.json` | Keep | Runtime plugin/provider config; current proof that local plugin loading is workspace-scoped |
 | `tui.json` | Keep | UI/plugin surface; shows where lightweight presentation or reminder plugins can be wired |
@@ -29,20 +29,20 @@
 
 | Local file | State | Capability covered |
 |---|---|---|
-| `.opencode/agents/cc-review.md` | Keep | review loop / correctness / security / maintainability |
-| `.opencode/agents/cc-bughunter.md` | Keep | root-cause debugging behavior |
-| `.opencode/agents/cc-ultraplan.md` | Keep | multi-phase planning |
-| `.opencode/agents/cc-worktree.md` | Reference / later refine | worktree operations, but not yet superpowers-level safety choreography |
-| `.opencode/agents/cc-commit.md` | Keep | atomic docs/code commit guidance |
-| `.opencode/agents/cc-doctor.md` | Keep | health checks and readiness verification |
-| `.opencode/agents/cc-config.md` | Keep | config review / effective settings inspection |
-| `.opencode/agents/cc-plugin.md` | Keep | plugin evaluation and compatibility work |
-| `.opencode/agents/cc-compact.md` | Keep | context compaction discipline |
-| `.opencode/agents/cc-resume.md` | Keep | resume-from-interrupted-work discipline |
-| `.opencode/agents/cc-memory.md` | Keep | durable context extraction |
-| `.opencode/agents/cc-share.md` | Keep | handoff/share summary generation |
-| `.opencode/agents/cc-statusline.md` | Keep | active-context/status summarization |
-| `.opencode/agents/cc-teleport.md` | Keep | context switching between work areas |
+| `.opencode/agents/gb-review.md` | Keep | review loop / correctness / security / maintainability |
+| `.opencode/agents/gb-debug.md` | Keep | root-cause debugging behavior |
+| `.opencode/agents/gb-ultraplan.md` | Keep | multi-phase planning |
+| `.opencode/agents/gb-worktree.md` | Reference / later refine | worktree operations, but not yet superpowers-level safety choreography |
+| `.opencode/agents/gb-commit.md` | Keep | atomic docs/code commit guidance |
+| `.opencode/agents/gb-doctor.md` | Keep | health checks and readiness verification |
+| `.opencode/agents/gb-config.md` | Keep | config review / effective settings inspection |
+| `.opencode/agents/gb-plugin.md` | Keep | plugin evaluation and compatibility work |
+| `.opencode/agents/gb-compact.md` | Keep | context compaction discipline |
+| `.opencode/agents/gb-resume.md` | Keep | resume-from-interrupted-work discipline |
+| `.opencode/agents/gb-memory.md` | Keep | durable context extraction |
+| `.opencode/agents/gb-share.md` | Keep | handoff/share summary generation |
+| `.opencode/agents/gb-statusline.md` | Keep | active-context/status summarization |
+| `.opencode/agents/gb-teleport.md` | Keep | context switching between work areas |
 
 ---
 
@@ -76,12 +76,12 @@ Current state: all three discipline skills are now implemented under `.opencode/
 | Desired capability | Superpowers source concept | Best current local owner | Future local asset |
 |---|---|---|---|
 | Design approval gate | `brainstorming` | `enter-plan-mode` | stronger wording in plan skill or new brainstorming skill |
-| Tiny-task planning | `writing-plans` | `cc-ultraplan` + `enter-plan-mode` | planning rubric update |
+| Tiny-task planning | `writing-plans` | `gb-ultraplan` + `enter-plan-mode` | planning rubric update |
 | TDD enforcement | `test-driven-development` | `.opencode/skills/test-driven-development/SKILL.md` | refine based on real sandbox use |
 | Verification-before-completion | `verification-before-completion` | `.opencode/skills/verification-before-completion/SKILL.md` | refine evidence language after real task usage |
-| Root-cause debugging gate | `systematic-debugging` | `.opencode/skills/systematic-debugging/SKILL.md` + `cc-bughunter` | tune boundary between reusable skill and specialist workflow |
-| Review sequencing | `requesting-code-review` / `code-reviewer` | `cc-review` | routing/policy update in `AGENTS.md` or docs |
-| Worktree safety choreography | `using-git-worktrees` | `cc-worktree` | refinement of worktree rules |
+| Root-cause debugging gate | `systematic-debugging` | `.opencode/skills/systematic-debugging/SKILL.md` + `gb-debug` | tune boundary between reusable skill and specialist workflow |
+| Review sequencing | `requesting-code-review` / `code-reviewer` | `gb-review` | routing/policy update in `AGENTS.md` or docs |
+| Worktree safety choreography | `using-git-worktrees` | `gb-worktree` | refinement of worktree rules |
 | Startup/bootstrap reminder | hook + plugin | none direct | optional local plugin under `.opencode/plugins/` |
 
 ---
@@ -92,9 +92,9 @@ These are the most likely local files in the rollout lifecycle:
 
 ### Skills
 
-- `.opencode/skills/test-driven-development/SKILL.md` ✅ implemented
-- `.opencode/skills/verification-before-completion/SKILL.md` ✅ implemented
-- `.opencode/skills/systematic-debugging/SKILL.md` ✅ implemented
+- `.opencode/skills/test-driven-development/SKILL.md` —implemented
+- `.opencode/skills/verification-before-completion/SKILL.md` —implemented
+- `.opencode/skills/systematic-debugging/SKILL.md` —implemented
 - optional later addition: `.opencode/skills/brainstorming/SKILL.md`
 
 ### Documentation
@@ -144,4 +144,4 @@ The most useful rollout pattern is:
 3. optionally reinforce them with routing/plugin reminders,
 4. validate with the same evidence-first style already used in this sandbox.
 
-That gives this workspace superpowers-like rigor without discarding CoffeeMix’s stronger specialist structure.
+That gives this workspace superpowers-like rigor without discarding CoffeeMix?�s stronger specialist structure.

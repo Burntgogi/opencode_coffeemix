@@ -72,7 +72,7 @@ What those pilots did **not** prove:
 Future edits to `AGENTS.md` beyond the minimal rule added now would be justified only if:
 
 - repeated broader tasks show the new skills should be mandatory workspace-wide gates,
-- their relationship to `cc-*` specialists needs more explicit policy wording,
+- their relationship to `gb-*` specialists needs more explicit policy wording,
 - completion/evidence rules need to be elevated further.
 
 Future edits to `oh-my-opencode.json` would be justified only if:

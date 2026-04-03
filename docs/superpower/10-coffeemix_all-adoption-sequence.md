@@ -28,7 +28,7 @@ That means future implementation should not begin with automation or plugin beha
 
 ## 3. Proposed future sequence
 
-### Phase 1 — deliver the first-wave local skill set
+### Phase 1 —deliver the first-wave local skill set
 
 Implemented in this workspace:
 
@@ -40,28 +40,28 @@ Still deferred:
 
 - optional brainstorming
 
-### Phase 2 — validate skill boundaries
+### Phase 2 —validate skill boundaries
 
 Confirm the implemented skills do not conflict with:
 
 - `enter-plan-mode`
-- `cc-bughunter`
-- `cc-review`
-- `cc-doctor`
+- `gb-debug`
+- `gb-review`
+- `gb-doctor`
 - other existing OMO/CoffeeMix primitives
 
-### Phase 3 — reflect stable behavior in authority docs
+### Phase 3 —reflect stable behavior in authority docs
 
 Only after the implemented skills are stable in real use, consider the proposal areas documented in `08` for:
 
 - `AGENTS.md`
 - `oh-my-opencode.json`
 
-### Phase 4 — validate workflow behavior in practice
+### Phase 4 —validate workflow behavior in practice
 
 Use the workflow in `05` and the evidence plan in `09` to confirm the new behavior works on realistic tasks.
 
-### Phase 5 — decide on optional bootstrap reinforcement
+### Phase 5 —decide on optional bootstrap reinforcement
 
 Only after the previous phases are proven should the workspace consider:
 
@@ -98,6 +98,6 @@ Future rollout should not:
 
 The safest future sequence is:
 
-**skills → boundaries → authority reflection → workflow proof → optional automation**
+**skills —boundaries —authority reflection —workflow proof —optional automation**
 
 That keeps coffeemix_all disciplined without destabilizing the existing sandbox foundation.

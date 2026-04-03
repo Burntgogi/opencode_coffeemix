@@ -1,4 +1,4 @@
-# Evidence — Large Task 02 Authority Reflection Decision
+# Evidence —Large Task 02 Authority Reflection Decision
 
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`  
 **Primary skills exercised**: `systematic-debugging`, `verification-before-completion`, `test-driven-development`
@@ -34,14 +34,14 @@ It was broader evidence that:
 - `reports/sandbox-e2e-report.md`
 - `reports/sandbox-smoke-results.json`
 - `reports/sandbox-e2e-results.json`
-- `routing-scenarios/07-cc-config-positive.json`
-- `routing-scenarios/08-cc-config-negative.json`
-- `routing-scenarios/09-cc-share-positive.json`
-- `routing-scenarios/10-cc-share-negative.json`
-- `routing-scenarios/11-cc-statusline-positive.json`
-- `routing-scenarios/12-cc-statusline-negative.json`
-- `routing-scenarios/13-cc-memory-positive.json`
-- `routing-scenarios/14-cc-memory-negative.json`
+- `routing-scenarios/07-gb-config-positive.json`
+- `routing-scenarios/08-gb-config-negative.json`
+- `routing-scenarios/09-gb-share-positive.json`
+- `routing-scenarios/10-gb-share-negative.json`
+- `routing-scenarios/11-gb-statusline-positive.json`
+- `routing-scenarios/12-gb-statusline-negative.json`
+- `routing-scenarios/13-gb-memory-positive.json`
+- `routing-scenarios/14-gb-memory-negative.json`
 - `docs/routing-validation-plan.md`
 - `reports/routing-validation-report.md`
 - `reports/routing-validation-results.json`
@@ -76,7 +76,7 @@ It is **not** strong enough to justify changing `oh-my-opencode.json`.
 
 ## Open risks
 
-- routing coverage is still not complete for every `cc-*` specialist
+- routing coverage is still not complete for every `gb-*` specialist
 - the new discipline skills still have stronger evidence on docs/config/runtime tasks than on a larger product-code task
 
 ---

@@ -25,12 +25,12 @@ It is derived from:
 
 The current sandbox already has strong specialist coverage through:
 
-- `cc-review`
-- `cc-bughunter`
-- `cc-ultraplan`
-- `cc-doctor`
-- `cc-compact`
-- `cc-resume`
+- `gb-review`
+- `gb-debug`
+- `gb-ultraplan`
+- `gb-doctor`
+- `gb-compact`
+- `gb-resume`
 - related CoffeeMix agents
 
 The missing layer is reusable discipline that applies across tasks regardless of specialist identity.
@@ -54,13 +54,12 @@ The highest-priority missing skills are:
 - make test-first or acceptance-first behavior explicit before implementation
 
 **Primary purpose**:
-- define a local equivalent of “no production change without a failing check or explicit acceptance target first”
-
+- define a local equivalent of ?�no production change without a failing check or explicit acceptance target first—
 **Best local complements**:
 - `enter-plan-mode`
-- `cc-ultraplan`
-- `cc-review`
-- `cc-doctor`
+- `gb-ultraplan`
+- `gb-review`
+- `gb-doctor`
 
 #### B. `.opencode/skills/verification-before-completion/SKILL.md`
 
@@ -68,11 +67,10 @@ The highest-priority missing skills are:
 - prevent completion claims without fresh evidence
 
 **Primary purpose**:
-- formalize the difference between “implemented” and “verified”
-
+- formalize the difference between ?�implemented—and ?�verified—
 **Best local complements**:
-- `cc-review`
-- `cc-doctor`
+- `gb-review`
+- `gb-doctor`
 - `compact-context`
 - evidence docs under `docs/`
 
@@ -82,12 +80,12 @@ The highest-priority missing skills are:
 - make root-cause investigation explicit before non-obvious fixes
 
 **Primary purpose**:
-- reinforce and generalize the strengths already present in `cc-bughunter`
+- reinforce and generalize the strengths already present in `gb-debug`
 
 **Best local complements**:
-- `cc-bughunter`
-- `cc-review`
-- `cc-doctor`
+- `gb-debug`
+- `gb-review`
+- `gb-doctor`
 
 ### 3.2 Optional later skill set
 
@@ -101,7 +99,7 @@ The highest-priority missing skills are:
 
 **Best local complements**:
 - `enter-plan-mode`
-- `cc-ultraplan`
+- `gb-ultraplan`
 - `metis`
 
 ---
@@ -181,12 +179,12 @@ Should include:
 - symptom vs root-cause separation,
 - evidence collection before fix proposals,
 - escalation after repeated failed attempts,
-- relationship to `cc-bughunter`,
+- relationship to `gb-debug`,
 - requirement to avoid guess-based fixes.
 
 Must not include:
 
-- code review guidance better owned by `cc-review`,
+- code review guidance better owned by `gb-review`,
 - completion criteria better owned by the verification skill,
 - design planning behavior better owned by plan/brainstorming skills.
 
@@ -226,10 +224,10 @@ These future skills should **augment**, not replace, the existing local system.
 
 Examples:
 
-- `systematic-debugging` should strengthen `cc-bughunter`, not replace it.
+- `systematic-debugging` should strengthen `gb-debug`, not replace it.
 - `brainstorming` should sit before `enter-plan-mode` or refine its use, not erase it.
-- `verification-before-completion` should reinforce `cc-review` and `cc-doctor`, not merge them.
-- `test-driven-development` should work with `cc-ultraplan` and existing evidence docs, not become a generic orchestrator.
+- `verification-before-completion` should reinforce `gb-review` and `gb-doctor`, not merge them.
+- `test-driven-development` should work with `gb-ultraplan` and existing evidence docs, not become a generic orchestrator.
 
 ---
 
@@ -243,7 +241,7 @@ Implemented from this design:
 
 Still deferred (evaluated and rejected):
 
-- `.opencode/skills/brainstorming/SKILL.md` — see `19-coffeemix_all-brainstorming-evaluation.md`
+- `.opencode/skills/brainstorming/SKILL.md` —see `19-coffeemix_all-brainstorming-evaluation.md`
 
 ---
 

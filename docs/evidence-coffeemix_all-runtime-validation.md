@@ -1,4 +1,4 @@
-# Evidence — Mix Runtime Validation
+# Evidence —Mix Runtime Validation
 
 **Date**: 2026-04-02
 
@@ -43,9 +43,9 @@ Report:
 - `reports/sandbox-smoke-report.md`
 
 Observed result:
-- PASS `cc-review`
-- PASS `cc-share`
-- PASS `cc-statusline`
+- PASS `gb-review`
+- PASS `gb-share`
+- PASS `gb-statusline`
 
 ### Stricter E2E
 Report:
@@ -54,16 +54,16 @@ Report:
 Observed result:
 - PASS agents visible
 - PASS skills visible
-- PASS `cc-commit`
-- PASS `cc-review`
-- PASS `cc-bughunter`
-- PASS `cc-ultraplan`
-- PASS `cc-teleport`
-- PASS `cc-plugin`
-- PASS `cc-memory`
-- PASS `cc-config`
-- PASS `cc-share`
-- PASS `cc-statusline`
+- PASS `gb-commit`
+- PASS `gb-review`
+- PASS `gb-debug`
+- PASS `gb-ultraplan`
+- PASS `gb-teleport`
+- PASS `gb-plugin`
+- PASS `gb-memory`
+- PASS `gb-config`
+- PASS `gb-share`
+- PASS `gb-statusline`
 
 ## Conclusion
 

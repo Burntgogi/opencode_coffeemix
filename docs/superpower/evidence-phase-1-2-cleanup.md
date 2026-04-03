@@ -1,4 +1,4 @@
-# Evidence — Phase 1-2 Documentation Cleanup
+# Evidence —Phase 1-2 Documentation Cleanup
 
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`
 **Date**: 2026-04-03
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Phase 1 fixes (Critical — stale/contradictory docs)
+## 1. Phase 1 fixes (Critical —stale/contradictory docs)
 
 | # | File | Issue | Fix applied |
 |---|---|---|---|
@@ -15,10 +15,10 @@
 | 3 | `06-coffeemix_all-diagrams.md` | 3 implemented skills labeled "future" | Changed to "implemented", updated Phase 6 diagram |
 | 4 | `11-coffeemix_all-traceability-matrix.md` | `07`/`09` described as future-only | Updated to show implemented assets and evidence |
 | 5 | `13-coffeemix_all-review-integration-delta.md` | "current set is 01~15" | Changed to "01~19" with evidence docs |
-| 6 | `docs/evidence-routing-validation.md` | "still not complete for all cc-* agents" | Clarified: identity-prompt routing complete, ambiguous-task routing remains |
-| 7 | `docs/evidence-integration-guide-self-audit.md` | "Many cc-* agents do not yet have routing tests" | Updated: all 14 covered, ambiguous-task routing remains |
+| 6 | `docs/evidence-routing-validation.md` | "still not complete for all gb-* agents" | Clarified: identity-prompt routing complete, ambiguous-task routing remains |
+| 7 | `docs/evidence-integration-guide-self-audit.md` | "Many gb-* agents do not yet have routing tests" | Updated: all 14 covered, ambiguous-task routing remains |
 
-## 2. Phase 2 fixes (Medium — status booleans)
+## 2. Phase 2 fixes (Medium —status booleans)
 
 | # | File | Issue | Fix applied |
 |---|---|---|---|
@@ -32,10 +32,10 @@
 
 ## 3. Phase 2-7: Smoke/e2e reports regenerated
 
-- `reports/sandbox-smoke-report.md` — regenerated with correct workspace path
-- `reports/sandbox-e2e-report.md` — regenerated with correct workspace path
-- `reports/sandbox-smoke-results.json` — inventory now shows 24 agents, 7 skills
-- `reports/sandbox-e2e-results.json` — inventory now shows 24 agents, 7 skills
+- `reports/sandbox-smoke-report.md` —regenerated with correct workspace path
+- `reports/sandbox-e2e-report.md` —regenerated with correct workspace path
+- `reports/sandbox-smoke-results.json` —inventory now shows 24 agents, 7 skills
+- `reports/sandbox-e2e-results.json` —inventory now shows 24 agents, 7 skills
 
 ## 4. Result
 

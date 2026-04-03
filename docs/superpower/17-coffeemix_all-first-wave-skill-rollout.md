@@ -48,9 +48,9 @@ The new skills are designed to work with, not replace:
 
 - `enter-plan-mode`
 - `ask-user-question`
-- `cc-bughunter`
-- `cc-review`
-- `cc-doctor`
+- `gb-debug`
+- `gb-review`
+- `gb-doctor`
 
 ---
 
@@ -77,7 +77,7 @@ The new skills are designed to work with, not replace:
 
 ### Open risks
 
-- the new skills have now been used on small sandbox-local documentation tasks, but not yet on a broader code/config rollout beyond this workspace’s documentation and local skill set
+- the new skills have now been used on small sandbox-local documentation tasks, but not yet on a broader code/config rollout beyond this workspace?�s documentation and local skill set
 
 ### Out of scope
 

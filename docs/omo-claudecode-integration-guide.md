@@ -20,7 +20,7 @@ This approach is already validated in the mix sandbox.
 
 ---
 
-## 2. What “integration” means here
+## 2. What ?�integration—means here
 
 Integration does **not** mean:
 - calling `claw.exe` as the new runtime center,
@@ -29,7 +29,7 @@ Integration does **not** mean:
 
 Integration **does** mean:
 - extracting high-value Claude Code workflows,
-- re-implementing them as OMO-native `cc-*` specialists,
+- re-implementing them as OMO-native `gb-*` specialists,
 - letting OMO orchestrate them,
 - validating the result in a sandbox before any wider adoption.
 
@@ -57,20 +57,20 @@ Claude Code source is reference-only.
 ## 4. Current integrated Claude-derived surface
 
 ### CoffeeMix agents
-- `cc-commit`
-- `cc-review`
-- `cc-compact`
-- `cc-worktree`
-- `cc-resume`
-- `cc-doctor`
-- `cc-memory`
-- `cc-config`
-- `cc-share`
-- `cc-statusline`
-- `cc-bughunter`
-- `cc-ultraplan`
-- `cc-teleport`
-- `cc-plugin`
+- `gb-commit`
+- `gb-review`
+- `gb-compact`
+- `gb-worktree`
+- `gb-resume`
+- `gb-doctor`
+- `gb-memory`
+- `gb-config`
+- `gb-share`
+- `gb-statusline`
+- `gb-debug`
+- `gb-ultraplan`
+- `gb-teleport`
+- `gb-plugin`
 
 ### CoffeeMix skills
 - `enter-plan-mode`
@@ -79,7 +79,7 @@ Claude Code source is reference-only.
 - `tool-search`
 
 ### CoffeeMix control rule
-`AGENTS.md` in the mix root explicitly tells OMO/Sisyphus to prefer `cc-*` specialists when the task clearly matches them.
+`AGENTS.md` in the mix root explicitly tells OMO/Sisyphus to prefer `gb-*` specialists when the task clearly matches them.
 
 ---
 
@@ -91,16 +91,16 @@ When adding a new Claude-derived capability, follow this sequence exactly.
 
 Before adding anything, create a short intake record containing:
 
-1. **Claude source behavior** — what exact behavior/pattern is being extracted
-2. **User value** — why this is worth having in OMO/OpenCode
-3. **OMO-native target** — agent, skill, rule, plugin, or validation asset
-4. **Files to touch** — exact runtime/validation files expected
-5. **Non-goals** — what this integration will not do
-6. **Why existing surface is insufficient** — why current `cc-*`, skills, or rules are not enough
+1. **Claude source behavior** —what exact behavior/pattern is being extracted
+2. **User value** —why this is worth having in OMO/OpenCode
+3. **OMO-native target** —agent, skill, rule, plugin, or validation asset
+4. **Files to touch** —exact runtime/validation files expected
+5. **Non-goals** —what this integration will not do
+6. **Why existing surface is insufficient** —why current `gb-*`, skills, or rules are not enough
 
 If this record cannot be written clearly, the integration is not ready.
 
-### Step 1 — Identify a real Claude Code pattern
+### Step 1 —Identify a real Claude Code pattern
 Use source evidence, not branding.
 
 Look for:
@@ -112,12 +112,12 @@ Look for:
 
 Do **not** add a new CoffeeMix agent just because a Claude command name exists.
 
-### Step 2 — Classify the pattern
+### Step 2 —Classify the pattern
 Pick one:
 
 | Pattern type | Target in OMO/CoffeeMix |
 |---|---|
-| narrow specialist behavior | `cc-*` agent |
+| narrow specialist behavior | `gb-*` agent |
 | repeated behavioral rule | skill |
 | orchestration preference | `AGENTS.md` rule |
 | startup/UI marker | `.opencode/plugins/*` + `tui.json` |
@@ -129,11 +129,11 @@ Use this rubric instead of intuition.
 
 | If the Claude pattern is... | Put it in... | Example | Anti-example |
 |---|---|---|---|
-| a narrow specialist workflow with a stable task boundary | `cc-*` agent | focused code review → `cc-review` | broad orchestration policy |
-| a reusable behavioral constraint or response habit | skill | compacting long context → `compact-context` | one-off git operation |
-| a routing preference about who should act | `AGENTS.md` | prefer `cc-bughunter` for root-cause debugging | implementing the debug workflow itself |
+| a narrow specialist workflow with a stable task boundary | `gb-*` agent | focused code review —`gb-review` | broad orchestration policy |
+| a reusable behavioral constraint or response habit | skill | compacting long context —`compact-context` | one-off git operation |
+| a routing preference about who should act | `AGENTS.md` | prefer `gb-debug` for root-cause debugging | implementing the debug workflow itself |
 | a subtle UI/startup marker | `.opencode/plugins/*` + `tui.json` | CoffeeMix badge on startup | command routing logic |
-| test-only verification logic | `tools/` + `scenarios/` | e2e scenario for `cc-share` | production runtime behavior |
+| test-only verification logic | `tools/` + `scenarios/` | e2e scenario for `gb-share` | production runtime behavior |
 
 Quick yes/no checks:
 - **Agent?** Does it own a named specialist job end-to-end?
@@ -142,14 +142,14 @@ Quick yes/no checks:
 - **Plugin?** Does it affect UI/presentation rather than control flow?
 - **Validation asset?** Is it only for proving behavior?
 
-### Step 3 — Keep OMO as control plane
+### Step 3 —Keep OMO as control plane
 Before implementing, ask:
 
 > Does this make OMO stronger, or does it make OMO depend on another runtime?
 
 If it makes OMO depend on another runtime, stop.
 
-### Step 4 — Implement in sandbox only
+### Step 4 —Implement in sandbox only
 Put runtime-facing files in:
 - root: `AGENTS.md`, `opencode.json`, `tui.json`, `oh-my-opencode.json`
 - `.opencode/agents/`
@@ -164,7 +164,7 @@ Put support files in:
 Put retired/failed experiments in:
 - `archive/`
 
-### Step 5 — Add routing awareness if needed
+### Step 5 —Add routing awareness if needed
 If the new specialist exists but OMO/Sisyphus does not prefer it naturally, update `AGENTS.md`.
 
 That rule layer is what closes the gap between:
@@ -193,11 +193,11 @@ When files disagree, use this precedence order:
 
 If a plan doc conflicts with live config, the live config wins.
 
-### Step 6 — Validate with both smoke and stricter e2e
+### Step 6 —Validate with both smoke and stricter e2e
 Every new capability should be tested in two layers:
 
-1. **Smoke** — lightweight sanity check
-2. **Stricter E2E** — explicit scenario validation
+1. **Smoke** —lightweight sanity check
+2. **Stricter E2E** —explicit scenario validation
 
 Do not claim integration is complete without both.
 
@@ -212,15 +212,15 @@ Use both:
 A task description that should naturally map to the specialist.
 
 Example:
-- “Which specialist should handle focused code review?” -> `cc-review`
+- ?�Which specialist should handle focused code review—?-> `gb-review`
 
 #### Negative routing test
 A nearby but broader task that should stay with baseline orchestration.
 
 Example:
-- “How should we reorganize the whole migration strategy?” should not blindly force `cc-review`
+- ?�How should we reorganize the whole migration strategy—?should not blindly force `gb-review`
 
-If only direct identity prompts (`You are cc-review`) are tested, routing is not actually proven.
+If only direct identity prompts (`You are gb-review`) are tested, routing is not actually proven.
 
 ---
 
@@ -306,20 +306,20 @@ Track integrated surfaces explicitly.
 
 | Capability | Type | Implemented | Smoke | E2E | Routing-aware | Evidence |
 |---|---|---:|---:|---:|---:|---:|
-| cc-commit | agent | yes | yes | yes | partial | yes |
-| cc-review | agent | yes | yes | yes | partial | yes |
-| cc-compact | agent | yes | prior | prior | no | yes |
-| cc-worktree | agent | yes | prior | prior | no | yes |
-| cc-resume | agent | yes | prior | prior | no | yes |
-| cc-doctor | agent | yes | prior | prior | no | yes |
-| cc-memory | agent | yes | no | yes | no | yes |
-| cc-config | agent | yes | no | yes | no | yes |
-| cc-share | agent | yes | yes | yes | no | yes |
-| cc-statusline | agent | yes | yes | yes | no | yes |
-| cc-bughunter | agent | yes | no | yes | partial | yes |
-| cc-ultraplan | agent | yes | no | yes | partial | yes |
-| cc-teleport | agent | yes | no | yes | no | yes |
-| cc-plugin | agent | yes | no | yes | no | yes |
+| gb-commit | agent | yes | yes | yes | partial | yes |
+| gb-review | agent | yes | yes | yes | partial | yes |
+| gb-compact | agent | yes | prior | prior | no | yes |
+| gb-worktree | agent | yes | prior | prior | no | yes |
+| gb-resume | agent | yes | prior | prior | no | yes |
+| gb-doctor | agent | yes | prior | prior | no | yes |
+| gb-memory | agent | yes | no | yes | no | yes |
+| gb-config | agent | yes | no | yes | no | yes |
+| gb-share | agent | yes | yes | yes | no | yes |
+| gb-statusline | agent | yes | yes | yes | no | yes |
+| gb-debug | agent | yes | no | yes | partial | yes |
+| gb-ultraplan | agent | yes | no | yes | partial | yes |
+| gb-teleport | agent | yes | no | yes | no | yes |
+| gb-plugin | agent | yes | no | yes | no | yes |
 | enter-plan-mode | skill | yes | n/a | indirect | n/a | yes |
 | ask-user-question | skill | yes | n/a | indirect | n/a | yes |
 | compact-context | skill | yes | n/a | indirect | n/a | yes |

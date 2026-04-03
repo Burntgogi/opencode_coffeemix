@@ -34,3 +34,20 @@ Current state:
 ## Non-goal
 
 This workspace does not imply global runtime adoption; implementation and evidence here are sandbox-local only.
+
+## Dependencies
+
+This workspace is designed to run with [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent),
+which is licensed under the Sustainable Use License v1.0.
+
+## Origin of Components
+
+| Prefix / Source | Origin |
+|---|---|
+| `gb-*` specialists | Original to coffeemix_all ("gb" = 가베, old Korean word for coffee) |
+| Discipline skills (TDD, verification, debugging) | Adapted from [obra/superpowers](https://github.com/obra/superpowers) |
+| Baseline agents (sisyphus, oracle, librarian, etc.) | Provided by [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) |
+| Command concept inspiration | [Claude Code](https://github.com/anthropics/claude-code) by Anthropic |
+
+All specialist prompts, validation scripts, and routing scenarios in this repository
+are independently authored works.

@@ -20,14 +20,14 @@ This design is based on the current local surfaces:
 - `.opencode/skills/enter-plan-mode/SKILL.md`
 - `.opencode/skills/ask-user-question/SKILL.md`
 - `.opencode/skills/compact-context/SKILL.md`
-- `.opencode/agents/cc-review.md`
-- `.opencode/agents/cc-bughunter.md`
-- `.opencode/agents/cc-doctor.md`
-- `.opencode/agents/cc-resume.md`
-- `.opencode/agents/cc-memory.md`
-- `.opencode/agents/cc-share.md`
-- `.opencode/agents/cc-compact.md`
-- `.opencode/agents/cc-statusline.md`
+- `.opencode/agents/gb-review.md`
+- `.opencode/agents/gb-debug.md`
+- `.opencode/agents/gb-doctor.md`
+- `.opencode/agents/gb-resume.md`
+- `.opencode/agents/gb-memory.md`
+- `.opencode/agents/gb-share.md`
+- `.opencode/agents/gb-compact.md`
+- `.opencode/agents/gb-statusline.md`
 
 ---
 
@@ -54,7 +54,7 @@ Local adaptation of superpowers TDD:
 - for config/docs/routing changes: define the failure condition first,
 - for sandbox-only work: define acceptance evidence first.
 
-Examples of acceptable “red” states in this sandbox:
+Examples of acceptable ?�red—states in this sandbox:
 
 - a missing routing rule,
 - a missing validation document,
@@ -64,7 +64,7 @@ Examples of acceptable “red” states in this sandbox:
 
 ### Context-specific red-state guide
 
-Because this workspace is primarily docs, config, agent, skill, and plugin metadata rather than a traditional application codebase, “red state” must be interpreted by artifact type.
+Because this workspace is primarily docs, config, agent, skill, and plugin metadata rather than a traditional application codebase, ?�red state—must be interpreted by artifact type.
 
 | Artifact type | Red state before change | Expected green state |
 |---|---|---|
@@ -80,14 +80,14 @@ This keeps TDD-like discipline usable even when traditional unit tests are not t
 Existing local support:
 
 - `docs/omo-claudecode-integration-guide.md` already emphasizes validation and evidence
-- `cc-doctor` already frames quick environment/project/config checks
-- `cc-review` already provides structured review output
+- `gb-doctor` already frames quick environment/project/config checks
+- `gb-review` already provides structured review output
 
 Recommended strengthening:
 
 - every task should end with a short evidence block,
 - evidence must be produced after the last change,
-- “should work” is never enough,
+- ?�should work—is never enough,
 - docs-only tasks must still verify file presence, correctness, and consistency.
 
 ### Evidence by workspace artifact type
@@ -103,7 +103,7 @@ Recommended strengthening:
 
 Existing local support:
 
-- `.opencode/agents/cc-bughunter.md`
+- `.opencode/agents/gb-debug.md`
 
 Recommended strengthening:
 
@@ -115,16 +115,16 @@ Recommended strengthening:
 
 Existing local support:
 
-- `cc-compact`
-- `cc-resume`
-- `cc-memory`
-- `cc-share`
+- `gb-compact`
+- `gb-resume`
+- `gb-memory`
+- `gb-share`
 - `compact-context`
 
 Recommended strengthening:
 
 - long work should preserve intent, plan, completed work, open risks, and restore context,
-- “done” summaries should identify where evidence lives,
+- ?�done—summaries should identify where evidence lives,
 - resumed work should verify current state before continuing old assumptions.
 
 ---
@@ -133,13 +133,10 @@ Recommended strengthening:
 
 The following skills were implemented based on this design:
 
-- `.opencode/skills/test-driven-development/SKILL.md` ✅
-- `.opencode/skills/verification-before-completion/SKILL.md` ✅
-- `.opencode/skills/systematic-debugging/SKILL.md` ✅
-
+- `.opencode/skills/test-driven-development/SKILL.md` —- `.opencode/skills/verification-before-completion/SKILL.md` —- `.opencode/skills/systematic-debugging/SKILL.md` —
 Deferred after evaluation:
 
-- `.opencode/skills/brainstorming/SKILL.md` — see `19-coffeemix_all-brainstorming-evaluation.md`
+- `.opencode/skills/brainstorming/SKILL.md` —see `19-coffeemix_all-brainstorming-evaluation.md`
 
 ### Optional plugin/rule reinforcement
 
@@ -152,14 +149,14 @@ No external path is required for this design.
 
 ## 4. Recommended workflow in this sandbox
 
-### Phase A — intake
+### Phase A —intake
 
 1. Read local files, not memory.
 2. Decide whether the task is trivial or non-trivial.
 3. If non-trivial, enter plan mode.
 4. Identify evidence that will prove the task is done.
 
-### Phase B — red state / acceptance target
+### Phase B —red state / acceptance target
 
 Before editing files, write down one of:
 
@@ -169,13 +166,13 @@ Before editing files, write down one of:
 - missing routing/ownership rule,
 - explicit acceptance checklist.
 
-### Phase C — implementation
+### Phase C —implementation
 
 1. Make the smallest change that can satisfy the target.
 2. Keep OMO as orchestrator and CoffeeMix specialists as execution identities.
 3. Use the appropriate specialist when the task clearly matches one.
 
-### Phase D — verification
+### Phase D —verification
 
 Verify with the narrowest useful evidence set:
 
@@ -185,7 +182,7 @@ Verify with the narrowest useful evidence set:
 - structured review where applicable,
 - cross-doc consistency checks for documentation work.
 
-### Phase E — completion
+### Phase E —completion
 
 Only declare done when all of these are true:
 
@@ -221,10 +218,10 @@ This matches the spirit of superpowers verification without changing the local c
 |---|---|---|
 | Plan-first gate | `enter-plan-mode` | already establishes confirm-before-change behavior |
 | Dangerous action confirmation | `ask-user-question` | already covers irreversible operations |
-| Root-cause debugging | `cc-bughunter` | strongest current debugging primitive |
-| Review before signoff | `cc-review` | structured code-quality and correctness review |
-| Quick system verification | `cc-doctor` | already frames project/config/environment checks |
-| Session continuity | `cc-resume`, `cc-memory`, `cc-share`, `cc-compact` | stronger than superpowers in ongoing-session handling |
+| Root-cause debugging | `gb-debug` | strongest current debugging primitive |
+| Review before signoff | `gb-review` | structured code-quality and correctness review |
+| Quick system verification | `gb-doctor` | already frames project/config/environment checks |
+| Session continuity | `gb-resume`, `gb-memory`, `gb-share`, `gb-compact` | stronger than superpowers in ongoing-session handling |
 
 ---
 

@@ -1,7 +1,7 @@
 # coffeemix_all Pre-Implementation Change Package
 
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`  
-**Status**: partially executed — first-wave skills implemented, authority rule added
+**Status**: partially executed —first-wave skills implemented, authority rule added
 **Purpose**: record the implementation package boundaries and what was actually delivered
 
 ---
@@ -18,7 +18,7 @@ That question has now been answered and the first wave executed.
 
 ## 2. Proposed package contents
 
-### Package A — skill layer
+### Package A —skill layer
 
 Implemented files:
 
@@ -30,26 +30,17 @@ Optional later addition:
 
 - `.opencode/skills/brainstorming/SKILL.md`
 
-### Package B — authority reflection layer
+### Package B —authority reflection layer
 
 Evaluation results:
 
-- `AGENTS.md` — minimal discipline rule added ✅
-- `oh-my-opencode.json` — no change justified, remains unchanged
+- `AGENTS.md` —minimal discipline rule added —- `oh-my-opencode.json` —no change justified, remains unchanged
 
-### Package C — validation/evidence layer
+### Package C —validation/evidence layer
 
 Evidence docs produced:
 
-- `evidence-pilot-01-tdd-index-alignment.md` ✅
-- `evidence-pilot-02-verification-rollout-proof.md` ✅
-- `evidence-pilot-03-debugging-state-alignment.md` ✅
-- `evidence-large-task-01-state-reconciliation.md` ✅
-- `evidence-large-task-02-authority-reflection-decision.md` ✅
-- `evidence-routing-expansion.md` ✅
-- `evidence-brainstorming-evaluation.md` ✅
-- `evidence-final-consolidated-summary.md` ✅
-
+- `evidence-pilot-01-tdd-index-alignment.md` —- `evidence-pilot-02-verification-rollout-proof.md` —- `evidence-pilot-03-debugging-state-alignment.md` —- `evidence-large-task-01-state-reconciliation.md` —- `evidence-large-task-02-authority-reflection-decision.md` —- `evidence-routing-expansion.md` —- `evidence-brainstorming-evaluation.md` —- `evidence-final-consolidated-summary.md` —
 ---
 
 ## 3. Explicit first-wave scope
@@ -70,7 +61,7 @@ Not in the first wave:
 
 - plugin/bootstrap automation,
 - broad routing rewrites,
-- new `cc-*` agents,
+- new `gb-*` agents,
 - final documentation collapse/restructure,
 - any work outside this workspace.
 

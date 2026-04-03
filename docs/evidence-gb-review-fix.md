@@ -1,10 +1,10 @@
-# Evidence — cc-review Fix
+# Evidence —gb-review Fix
 
 **Date**: 2026-04-02
 
 ## Scope
 
-Fix only the `cc-review` failure in `opencode_coffeemix_all_sandbox`.
+Fix only the `gb-review` failure in `opencode_coffeemix_all_sandbox`.
 
 ## Root cause
 
@@ -24,7 +24,7 @@ Observed failure state:
 
 Updated:
 
-- `scenarios/02-cc-review.json`
+- `scenarios/02-gb-review.json`
 
 Change:
 - `max_lines`: `35` -> `50`
@@ -34,14 +34,14 @@ Change:
 Re-ran mix e2e runner.
 
 Observed in `reports/sandbox-e2e-results.json`:
-- `cc-review.passed = true`
+- `gb-review.passed = true`
 - `include_ok = true`
 - `exclude_ok = true`
 - `line_ok = true`
 
 Observed in `reports/sandbox-e2e-report.md`:
-- `PASS cc-review`
+- `PASS gb-review`
 
 ## Conclusion
 
-`cc-review` is now stable under the current validation regime with the smallest possible scenario-only change.
+`gb-review` is now stable under the current validation regime with the smallest possible scenario-only change.

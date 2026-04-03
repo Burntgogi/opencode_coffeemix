@@ -1,4 +1,4 @@
-# Evidence — Brainstorming Skill Evaluation
+# Evidence —Brainstorming Skill Evaluation
 
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`
 **Primary skills exercised**: `systematic-debugging`, `verification-before-completion`
@@ -15,10 +15,10 @@ The original superpowers-derived design in `07` proposed a `brainstorming` skill
 
 The question was whether brainstorming would add value or create overlap. The existing local system already has:
 
-- `enter-plan-mode` — plan-before-change gate with user confirmation
-- `cc-ultraplan` — phased architecture planning specialist
-- `metis` — strategic framing for ambiguous/complex requests
-- `AGENTS.md` routing — routes ambiguous requests to `metis`, multi-step work to planning
+- `enter-plan-mode` —plan-before-change gate with user confirmation
+- `gb-ultraplan` —phased architecture planning specialist
+- `metis` —strategic framing for ambiguous/complex requests
+- `AGENTS.md` routing —routes ambiguous requests to `metis`, multi-step work to planning
 
 ---
 
@@ -31,7 +31,7 @@ The question was whether brainstorming would add value or create overlap. The ex
 ## Validation
 
 - confirmed all brainstorming intents are already covered by existing local primitives
-- confirmed adding brainstorming would create three-way overlap with `metis`, `enter-plan-mode`, and `cc-ultraplan`
+- confirmed adding brainstorming would create three-way overlap with `metis`, `enter-plan-mode`, and `gb-ultraplan`
 - confirmed no real task during this rollout phase demonstrated a gap that only brainstorming could fill
 - confirmed the sandbox's current workload does not require a separate idea-generation gate
 

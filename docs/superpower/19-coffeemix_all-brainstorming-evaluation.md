@@ -1,7 +1,7 @@
 # Brainstorming Skill Need Evaluation
 
 **Workspace**: `C:\Work\claude_pickup\opencode_coffeemix_all_sandbox`
-**Status**: evaluation complete — decision: do not add
+**Status**: evaluation complete —decision: do not add
 **Purpose**: determine whether a `brainstorming` skill is necessary given existing local coverage
 
 ---
@@ -12,7 +12,7 @@ From the original superpowers-derived design in `07`, brainstorming was proposed
 
 - establish a stronger idea-approval gate before larger design or integration work
 - strengthen `enter-plan-mode` for cases where design exploration should happen before implementation planning
-- complement `cc-ultraplan` and `metis`
+- complement `gb-ultraplan` and `metis`
 
 ## 2. Existing local coverage
 
@@ -21,7 +21,7 @@ From the original superpowers-derived design in `07`, brainstorming was proposed
 - already proposes approach and gets user confirmation
 - already handles multi-step and cross-module changes
 
-### `cc-ultraplan`
+### `gb-ultraplan`
 - already handles phased architecture planning
 - already produces ordering, dependencies, and risk analysis
 
@@ -32,16 +32,16 @@ From the original superpowers-derived design in `07`, brainstorming was proposed
 ### AGENTS.md routing
 - already routes ambiguous requests to `metis`
 - already routes multi-step work to planning
-- already routes architecture work to `cc-ultraplan`
+- already routes architecture work to `gb-ultraplan`
 
 ## 3. Gap analysis
 
 | Brainstorming intent | Existing local owner | Coverage quality |
 |---|---|---|
-| Idea generation before planning | `metis` | adequate — metis already frames ambiguous requests |
-| Design approval gate | `enter-plan-mode` | adequate — already requires confirmation before file changes |
-| Phased architecture exploration | `cc-ultraplan` | strong — dedicated planning specialist |
-| Question-first behavior | `enter-plan-mode` + `metis` | adequate — both already ask clarifying questions |
+| Idea generation before planning | `metis` | adequate —metis already frames ambiguous requests |
+| Design approval gate | `enter-plan-mode` | adequate —already requires confirmation before file changes |
+| Phased architecture exploration | `gb-ultraplan` | strong —dedicated planning specialist |
+| Question-first behavior | `enter-plan-mode` + `metis` | adequate —both already ask clarifying questions |
 
 ## 4. Overlap risk
 
@@ -49,7 +49,7 @@ Adding brainstorming would create three-way overlap with:
 
 - `metis` (strategic framing)
 - `enter-plan-mode` (plan-before-change gate)
-- `cc-ultraplan` (phased planning)
+- `gb-ultraplan` (phased planning)
 
 This overlap would increase prompt complexity without proven necessity.
 
@@ -59,7 +59,7 @@ This overlap would increase prompt complexity without proven necessity.
 
 Reasons:
 
-1. The existing local system already covers all brainstorming intents through `metis`, `enter-plan-mode`, and `cc-ultraplan`
+1. The existing local system already covers all brainstorming intents through `metis`, `enter-plan-mode`, and `gb-ultraplan`
 2. Adding it would create measurable overlap with three existing primitives
 3. No real task during this rollout phase demonstrated a gap that only brainstorming could fill
 4. The sandbox's current workload (docs, config, skills, routing) does not require a separate idea-generation gate

@@ -15,12 +15,12 @@
 - [`evidence-coffeemix_all-runtime-validation.md`](./evidence-coffeemix_all-runtime-validation.md)
 - [`evidence-routing-validation.md`](./evidence-routing-validation.md)
 - [`evidence-integration-guide-self-audit.md`](./evidence-integration-guide-self-audit.md)
-- [`evidence-cc-review-fix.md`](./evidence-cc-review-fix.md)
-- [`evidence-cc-teleport-fix.md`](./evidence-cc-teleport-fix.md)
+- [`evidence-gb-review-fix.md`](./evidence-gb-review-fix.md)
+- [`evidence-gb-teleport-fix.md`](./evidence-gb-teleport-fix.md)
 
 ## Ordered coffeemix_all plan set
 
-- [`superpower/README.md`](./superpower/README.md) — full index with 01~19 + evidence docs
+- [`superpower/README.md`](./superpower/README.md) —full index with 01~19 + evidence docs
 
 ## Reading order
 
