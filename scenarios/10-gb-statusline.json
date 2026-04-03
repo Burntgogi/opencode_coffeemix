@@ -1,0 +1,7 @@
+{
+  "name": "gb-statusline",
+  "prompt": "You are the gb-statusline agent. Show status for sandbox runtime openai/gpt-5.4, config sandbox, working dir C:/Work/claude_pickup/opencode_coffeemix_all_sandbox, agents 22, skills 5.",
+  "must_include": ["runtime", "config", "working"],
+  "must_exclude": ["full file contents"],
+  "max_lines": 20
+}

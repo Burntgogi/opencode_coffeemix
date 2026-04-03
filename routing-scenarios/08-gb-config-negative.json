@@ -1,0 +1,7 @@
+{
+  "name": "gb-config-negative",
+  "prompt": "In this workspace, which specialist should handle a concise session handoff or export summary? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-config"],
+  "max_lines": 5
+}

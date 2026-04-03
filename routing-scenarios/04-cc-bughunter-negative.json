@@ -1,7 +1,0 @@
-{
-  "name": "cc-bughunter-negative",
-  "prompt": "In this workspace, which specialist should handle a high-level architecture tradeoff discussion? Answer with one agent name only.",
-  "must_include": [],
-  "must_exclude": ["cc-bughunter"],
-  "max_lines": 5
-}

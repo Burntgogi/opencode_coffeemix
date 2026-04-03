@@ -1,0 +1,7 @@
+{
+  "name": "gb-teleport-positive",
+  "prompt": "In this workspace, which specialist should handle safe context switching between branches, worktrees, or sessions while preserving state? Answer with one agent name only.",
+  "must_include": ["gb-teleport"],
+  "must_exclude": [],
+  "max_lines": 5
+}

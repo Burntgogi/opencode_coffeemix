@@ -1,7 +1,0 @@
-{
-  "name": "cc-compact-negative",
-  "prompt": "In this workspace, which specialist should handle effective configuration review and risky settings inspection? Answer with one agent name only.",
-  "must_include": [],
-  "must_exclude": ["cc-compact"],
-  "max_lines": 5
-}

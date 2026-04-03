@@ -23,11 +23,10 @@ def run_scenarios() -> list[dict]:
     results = []
     for path in sorted(SCENARIOS.glob("*.json")):
         scenario = json.loads(path.read_text(encoding="utf-8"))
-        stdout, stderr, returncode = run_command(
+        result = run_command(
             ["opencode", "run", scenario["prompt"], "--model", "openai/gpt-5.4"],
             ROOT,
         )
-        result = {"returncode": returncode, "stdout": stdout, "stderr": stderr}
         results.append(evaluate_scenario(scenario, result))
     return results
 

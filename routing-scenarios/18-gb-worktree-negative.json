@@ -1,0 +1,7 @@
+{
+  "name": "gb-worktree-negative",
+  "prompt": "In this workspace, which specialist should handle a focused code review for security vulnerabilities? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-worktree"],
+  "max_lines": 5
+}

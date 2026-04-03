@@ -1,0 +1,7 @@
+{
+  "name": "gb-ultraplan-positive",
+  "prompt": "In this workspace, which specialist should handle phased architecture planning for a migration? Answer with one agent name only.",
+  "must_include": ["gb-ultraplan"],
+  "must_exclude": [],
+  "max_lines": 5
+}

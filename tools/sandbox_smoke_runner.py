@@ -29,7 +29,7 @@ def run_inventory_checks() -> dict:
 
 def run_scenarios() -> list[dict]:
     results = []
-    selected = {"cc-review", "cc-share", "cc-statusline"}
+    selected = {"gb-review", "gb-share", "gb-statusline"}
     for path in sorted(SCENARIOS.glob("*.json")):
         scenario = json.loads(path.read_text(encoding="utf-8"))
         if scenario["name"] not in selected:

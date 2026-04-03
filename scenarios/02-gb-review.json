@@ -1,0 +1,7 @@
+{
+  "name": "gb-review",
+  "prompt": "You are the gb-review agent. Review this code for correctness and security: def get_user(id): return db.execute(f'SELECT * FROM users WHERE id = {id}')",
+  "must_include": ["security", "injection"],
+  "must_exclude": ["looks good"],
+  "max_lines": 50
+}

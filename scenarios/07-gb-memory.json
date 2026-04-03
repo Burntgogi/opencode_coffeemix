@@ -1,0 +1,7 @@
+{
+  "name": "gb-memory",
+  "prompt": "You are the gb-memory agent. From this session snapshot, extract durable memory: OMO is the center; Claude Code is reference-only; sandbox path is C:/Work/claude_pickup/opencode_coffeemix_all_sandbox; temporary string is hello world. Return Persist, Do Not Persist, and Re-check Later.",
+  "must_include": ["persist", "do not persist"],
+  "must_exclude": ["persist: hello world"],
+  "max_lines": 30
+}

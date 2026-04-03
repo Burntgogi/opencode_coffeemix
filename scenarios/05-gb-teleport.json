@@ -1,0 +1,7 @@
+{
+  "name": "gb-teleport",
+  "prompt": "You are the gb-teleport agent. Switch from branch feat/auth with uncommitted notes to bugfix/session-timeout. Explain how state is preserved and how to return.",
+  "must_include": ["switch", "return"],
+  "must_exclude": ["discard changes"],
+  "max_lines": 50
+}

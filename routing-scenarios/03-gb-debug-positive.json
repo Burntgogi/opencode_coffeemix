@@ -1,0 +1,7 @@
+{
+  "name": "gb-debug-positive",
+  "prompt": "In this workspace, which specialist should handle bug root-cause investigation? Answer with one agent name only.",
+  "must_include": ["gb-debug"],
+  "must_exclude": [],
+  "max_lines": 5
+}

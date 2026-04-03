@@ -1,7 +1,0 @@
-{
-  "name": "cc-config-positive",
-  "prompt": "In this workspace, which specialist should handle effective configuration review, override analysis, and risky settings inspection? Answer with one agent name only.",
-  "must_include": ["cc-config"],
-  "must_exclude": [],
-  "max_lines": 5
-}

@@ -2,7 +2,7 @@
 
 Identity-prompt routing validation scenarios.
 
-Each scenario asks "which specialist should handle X?" and verifies the response matches the expected `cc-*` agent (positive) or avoids the wrong one (negative).
+Each scenario asks "which specialist should handle X?" and verifies the response matches the expected `gb-*` agent (positive) or avoids the wrong one (negative).
 
 Used by:
 - `tools/routing_validation_runner.py` (all files)

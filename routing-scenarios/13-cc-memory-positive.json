@@ -1,7 +1,0 @@
-{
-  "name": "cc-memory-positive",
-  "prompt": "In this workspace, which specialist should extract durable memory from a session snapshot? Answer with one agent name only.",
-  "must_include": ["cc-memory"],
-  "must_exclude": [],
-  "max_lines": 5
-}

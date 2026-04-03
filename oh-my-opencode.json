@@ -36,59 +36,59 @@
     "atlas": {
       "model": "opencode-go/minimax-m2.7"
     },
-    "cc-commit": {
+    "gb-commit": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-review": {
+    "gb-review": {
       "model": "openai/gpt-5.4",
       "variant": "high"
     },
-    "cc-compact": {
+    "gb-compact": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-worktree": {
+    "gb-worktree": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-resume": {
+    "gb-resume": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-doctor": {
+    "gb-doctor": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-memory": {
+    "gb-memory": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-config": {
+    "gb-config": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-share": {
+    "gb-share": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-statusline": {
+    "gb-statusline": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-bughunter": {
+    "gb-debug": {
       "model": "openai/gpt-5.4",
       "variant": "high"
     },
-    "cc-ultraplan": {
+    "gb-ultraplan": {
       "model": "openai/gpt-5.4",
       "variant": "high"
     },
-    "cc-teleport": {
+    "gb-teleport": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     },
-    "cc-plugin": {
+    "gb-plugin": {
       "model": "openai/gpt-5.4",
       "variant": "medium"
     }

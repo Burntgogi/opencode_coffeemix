@@ -1,7 +1,0 @@
-{
-  "name": "cc-statusline-positive",
-  "prompt": "In this workspace, which specialist should handle a concise runtime, config, and working-directory status snapshot? Answer with one agent name only.",
-  "must_include": ["cc-statusline"],
-  "must_exclude": [],
-  "max_lines": 5
-}

@@ -3,23 +3,23 @@
 This workspace is the `coffeemix_all` OpenCode + OMO sandbox with CoffeeMix layered on top.
 
 ## Core rule
-OMO remains the control plane, but when a task matches a CoffeeMix specialist exactly, prefer the `cc-*` specialist over a broader baseline agent.
+OMO remains the control plane, but when a task matches a CoffeeMix specialist exactly, prefer the `gb-*` specialist over a broader baseline agent.
 
 ## Prefer these CoffeeMix specialists first
-- `cc-review` for focused code review
-- `cc-bughunter` for bug/root-cause investigation
-- `cc-ultraplan` for phased architecture or migration planning
-- `cc-commit` for commit-message and staging guidance
-- `cc-worktree` for git worktree workflows
-- `cc-resume` for restoring interrupted work
-- `cc-doctor` for quick project diagnostics
-- `cc-memory` for durable session memory extraction
-- `cc-config` for config/effective-settings review
-- `cc-share` for concise handoff/export summaries
-- `cc-statusline` for quick sandbox/project status summaries
-- `cc-teleport` for context switching between branches/worktrees/tasks
-- `cc-plugin` for plugin evaluation/management
-- `cc-compact` for compacting long context into a resumable summary
+- `gb-review` for focused code review
+- `gb-debug` for bug/root-cause investigation
+- `gb-ultraplan` for phased architecture or migration planning
+- `gb-commit` for commit-message and staging guidance
+- `gb-worktree` for git worktree workflows
+- `gb-resume` for restoring interrupted work
+- `gb-doctor` for quick project diagnostics
+- `gb-memory` for durable session memory extraction
+- `gb-config` for config/effective-settings review
+- `gb-share` for concise handoff/export summaries
+- `gb-statusline` for quick sandbox/project status summaries
+- `gb-teleport` for context switching between branches/worktrees/tasks
+- `gb-plugin` for plugin evaluation/management
+- `gb-compact` for compacting long context into a resumable summary
 
 ## Baseline OMO agents still own broad work
 - `sisyphus`: orchestration and overall task steering
@@ -30,12 +30,19 @@ OMO remains the control plane, but when a task matches a CoffeeMix specialist ex
 - `explore`: codebase exploration
 
 ## Routing rules
-1. If a task clearly matches a `cc-*` specialist, choose that specialist first.
+1. If a task clearly matches a `gb-*` specialist, choose that specialist first.
 2. If a task is broad or mixed, Sisyphus may orchestrate multiple specialists.
 3. Do not answer inventory questions from memory if sandbox files can be read.
 4. For sandbox checks, prefer reading `oh-my-opencode.json`, `.opencode/agents/`, and `.opencode/skills/` directly.
 5. Treat this workspace as sandbox-only; do not assume global config is authoritative here.
 6. For non-trivial sandbox-local changes, apply the local discipline skills before declaring completion: define a red state with `test-driven-development`, collect fresh proof with `verification-before-completion`, and use `systematic-debugging` when the cause of a failure is unclear.
+
+## Specialist context
+
+All `gb-*` specialists share these workspace-level constraints:
+- Routing is governed by the rules in this file
+- Validation uses `tools/harness.py` + `scenarios/` + `routing-scenarios/`
+- When in doubt, prefer the smallest possible change
 
 ## Validation harness
 

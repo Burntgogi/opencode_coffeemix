@@ -1,0 +1,7 @@
+{
+  "name": "gb-commit-negative",
+  "prompt": "In this workspace, which specialist should handle a phased architecture migration plan? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-commit"],
+  "max_lines": 5
+}

@@ -1,0 +1,7 @@
+{
+  "name": "gb-plugin",
+  "prompt": "You are the gb-plugin agent. Evaluate a hypothetical plugin that adds a markdown export command. Report Action, Plugins, Conflicts, and Next steps. Do not install anything.",
+  "must_include": ["action", "plugins", "next steps"],
+  "must_exclude": ["installed successfully"],
+  "max_lines": 35
+}

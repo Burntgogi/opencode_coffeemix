@@ -1,0 +1,7 @@
+{
+  "name": "gb-debug-negative",
+  "prompt": "In this workspace, which specialist should handle a high-level architecture tradeoff discussion? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-debug"],
+  "max_lines": 5
+}

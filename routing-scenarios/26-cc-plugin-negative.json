@@ -1,7 +1,0 @@
-{
-  "name": "cc-plugin-negative",
-  "prompt": "In this workspace, which specialist should handle bug root-cause investigation? Answer with one agent name only.",
-  "must_include": [],
-  "must_exclude": ["cc-plugin"],
-  "max_lines": 5
-}

@@ -1,0 +1,7 @@
+{
+  "name": "gb-review-negative",
+  "prompt": "In this workspace, which specialist should handle a broad migration strategy discussion across multiple systems? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-review"],
+  "max_lines": 5
+}

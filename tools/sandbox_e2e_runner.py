@@ -27,8 +27,8 @@ def run_inventory_checks() -> dict:
     skills = run_command(["opencode", "run", "List skill names only."], ROOT)
     agent_ok = (
         agents["returncode"] == 0
-        and "cc-commit" in agents["stdout"]
-        and "cc-bughunter" in agents["stdout"]
+        and "gb-commit" in agents["stdout"]
+        and "gb-debug" in agents["stdout"]
         and "sisyphus" in agents["stdout"]
     )
     skill_ok = (

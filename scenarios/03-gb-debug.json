@@ -1,0 +1,7 @@
+{
+  "name": "gb-debug",
+  "prompt": "You are the gb-debug agent. Investigate this symptom: API returns 500 only when user_id is missing. Provide Symptom, Root cause, Evidence, and Fix.",
+  "must_include": ["root cause", "evidence", "fix"],
+  "must_exclude": ["I am just guessing"],
+  "max_lines": 40
+}

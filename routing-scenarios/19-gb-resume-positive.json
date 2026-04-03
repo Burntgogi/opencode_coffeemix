@@ -1,0 +1,7 @@
+{
+  "name": "gb-resume-positive",
+  "prompt": "In this workspace, which specialist should handle resuming an interrupted session and reconstructing where work left off? Answer with one agent name only.",
+  "must_include": ["gb-resume"],
+  "must_exclude": [],
+  "max_lines": 5
+}

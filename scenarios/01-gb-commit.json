@@ -1,0 +1,7 @@
+{
+  "name": "gb-commit",
+  "prompt": "You are the gb-commit agent. Changed files: src/auth.py and tests/test_auth.py. Propose a conventional commit message and what should be staged together.",
+  "must_include": ["commit", "stage"],
+  "must_exclude": ["force push"],
+  "max_lines": 30
+}

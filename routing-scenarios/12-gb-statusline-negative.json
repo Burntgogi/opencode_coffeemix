@@ -1,0 +1,7 @@
+{
+  "name": "gb-statusline-negative",
+  "prompt": "In this workspace, which specialist should extract durable memory from a session snapshot? Answer with one agent name only.",
+  "must_include": [],
+  "must_exclude": ["gb-statusline"],
+  "max_lines": 5
+}
