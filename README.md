@@ -1,62 +1,65 @@
-# coffeemix_all Workspace
+# coffeemix_all
 
-This workspace is the sandbox-local `coffeemix_all` OpenCode + OMO environment, with CoffeeMix layered on top for local workflow, routing, and validation work.
+An OpenCode + OMO workspace with a layered specialist system for workflow, routing, and validation.
 
 ## Start here
 
 - Workspace rules and routing priorities: [`AGENTS.md`](./AGENTS.md)
-- Main documentation index: [`docs/README.md`](./docs/README.md)
-- Ordered planning and evidence set: [`docs/superpower/README.md`](./docs/superpower/README.md)
+- Documentation index: [`docs/README.md`](./docs/README.md)
 
-## Purpose and scope
+## What this is
 
-- sandbox-local OMO/CoffeeMix workflow work
-- documentation-first planning and evidence capture
-- local skill and routing discipline for non-trivial sandbox changes
-- validation of task scenarios and specialist routing behavior
+coffeemix_all provides:
 
-## Current structure
+- **14 `gb-*` specialists** — narrow-scope agents for review, debugging, planning, diagnostics, status, handoff, and more
+- **8 local skills** — reusable workflow gates for planning, debugging, verification, and adoption intake
+- **Validation harness** — scenario-based testing for both task behavior and specialist routing
 
-- `docs/` holds the main workspace docs and evidence docs
-- `docs/superpower/` holds the ordered `01` to `19` plan set plus 9 evidence docs
-- `.opencode/skills/` currently holds 8 local skills:
-  - `ask-user-question`
-  - `compact-context`
-  - `enter-plan-mode`
-  - `integration-intake`
-  - `systematic-debugging`
-  - `test-driven-development`
-  - `tool-search`
-  - `verification-before-completion`
+## Structure
 
-Current doc grouping stays lightweight:
+| Path | Purpose |
+|---|---|
+| `.opencode/agents/` | 14 `gb-*` specialist prompts |
+| `.opencode/skills/` | 8 local workflow skills |
+| `scenarios/` | Task-based behavior scenarios |
+| `routing-scenarios/` | Identity-prompt routing validation (28 scenarios × 14 specialists) |
+| `tools/` | Validation harness and runners |
+| `docs/` | Public-facing guides and architecture reference |
+| `archive/` | Internal planning history and evidence docs |
 
-- `01` to `15` are planning, workflow, readiness, and pre-implementation docs
-- `16` to `18` record first-wave implementation and authority judgment
-- `19` records the brainstorming skill evaluation, evaluated and deferred
-- the evidence docs capture pilot usage, larger task evidence, cleanup/refactoring evidence, brainstorming evaluation, and the consolidated summary
+## Skills
 
-## Validation surface
+| Skill | Purpose |
+|---|---|
+| `ask-user-question` | Gate dangerous or irreversible operations behind explicit confirmation |
+| `compact-context` | Summarize long-running sessions while preserving critical information |
+| `enter-plan-mode` | Switch to planning mode before non-trivial implementation |
+| `integration-intake` | Gate external workflow/tool adoption behind explicit intake questions |
+| `systematic-debugging` | Root-cause-first investigation discipline |
+| `test-driven-development` | Define failing checks or acceptance targets before changes |
+| `tool-search` | Discover and select tools based on current task context |
+| `verification-before-completion` | Require fresh evidence before declaring work complete |
 
-- `tools/harness.py` is the shared validation runner
-- `tools/sandbox_smoke_runner.py` covers smoke checks and subset scenarios
-- `tools/sandbox_e2e_runner.py` covers full scenario validation
-- `tools/routing_validation_runner.py` covers routing validation for 28 identity-prompt scenarios across 14 `gb-*` specialists
-- `scenarios/` holds task-based scenarios
-- `routing-scenarios/` holds routing scenarios
-- `reports/` holds generated validation output
+## Validation
 
-## Current capabilities
+Run the validation harness to verify specialist routing and scenario behavior:
 
-- 14 `gb-*` specialists are the preferred narrow specialists when a task matches exactly
-- OMO remains the control plane for broad or mixed work
-- `integration-intake` gates new Claude-derived integration proposals before planning or implementation
-- the local workflow keeps intake, readiness, status, and verification as separate concerns
-- only verification counts as completion proof after the final change
+```bash
+# Smoke checks (file existence, inventory, subset scenarios)
+python tools/sandbox_smoke_runner.py
+
+# Full e2e validation (all scenarios, strict checks)
+python tools/sandbox_e2e_runner.py
+
+# Routing validation (28 identity-prompt scenarios across 14 specialists)
+python tools/routing_validation_runner.py
+```
+
+Reports are written to `reports/` (gitignored).
 
 ## Non-goal
 
-This workspace does not imply global runtime adoption or broad feature parity work. All workflow, evidence, and validation claims here are sandbox-local only.
+This workspace does not imply global runtime adoption. It is a self-contained, reproducible configuration set for OpenCode + OMO environments.
 
 ## Dependencies
 
