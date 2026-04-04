@@ -2,17 +2,18 @@
 
 ## Core workspace docs
 
-- [`omo-claudecode-integration-guide.md`](./omo-claudecode-integration-guide.md)
-- [`routing-validation-plan.md`](./routing-validation-plan.md)
-- [`coffeemix_all-runtime-validation-plan.md`](./coffeemix_all-runtime-validation-plan.md)
+- [`installation-guide.md`](./installation-guide.md) — how to install coffeemix_all into your project
 - [`coffeemix_all-current-workflow-and-structure.md`](./coffeemix_all-current-workflow-and-structure.md) — current-state workflow and structure snapshot
-- [`public-packaging-plan.md`](./public-packaging-plan.md) — public packaging classification
+- [`omo-claudecode-integration-guide.md`](./omo-claudecode-integration-guide.md) — integration methodology
+- [`routing-validation-plan.md`](./routing-validation-plan.md) — routing validation methodology
+- [`coffeemix_all-runtime-validation-plan.md`](./coffeemix_all-runtime-validation-plan.md) — runtime validation plan
 
 ## Reading order
 
 1. workspace root [`README.md`](../README.md)
 2. this index
-3. [`coffeemix_all-current-workflow-and-structure.md`](./coffeemix_all-current-workflow-and-structure.md)
+3. [`installation-guide.md`](./installation-guide.md)
+4. [`coffeemix_all-current-workflow-and-structure.md`](./coffeemix_all-current-workflow-and-structure.md)
 
 ## Internal history (archived)
 

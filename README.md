@@ -46,10 +46,10 @@ Run the validation harness to verify specialist routing and scenario behavior:
 
 ```bash
 # Smoke checks (file existence, inventory, subset scenarios)
-python tools/sandbox_smoke_runner.py
+python tools/workspace_smoke_runner.py
 
 # Full e2e validation (all scenarios, strict checks)
-python tools/sandbox_e2e_runner.py
+python tools/workspace_e2e_runner.py
 
 # Routing validation (28 identity-prompt scenarios across 14 specialists)
 python tools/routing_validation_runner.py
