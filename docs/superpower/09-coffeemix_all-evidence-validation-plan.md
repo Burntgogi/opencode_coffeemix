@@ -42,6 +42,13 @@ Now that the first-wave skills exist locally, the remaining evidence set should 
 4. the workflow can be followed in real tasks,
 5. completion claims are backed by fresh evidence rather than assumption.
 
+It should also preserve one boundary clearly:
+
+- intake identifies scope and authority,
+- readiness decides whether work can start or broaden,
+- status reporting summarizes current state,
+- verification proves the requested outcome after the final change.
+
 ---
 
 ## 4. Proposed future evidence docs
@@ -117,6 +124,8 @@ For broader adoption beyond the first implemented skills, the minimum evidence s
 
 This creates a progression from **implemented assets** to **behavior proof** to **roll-up summary**.
 
+It also prevents the evidence pack from collapsing readiness language or status language into false completion claims.
+
 ---
 
 ## 6. Relationship to the existing workflow model
@@ -131,6 +140,8 @@ The future evidence pack should map directly onto the workflow from `05`:
 | Smallest useful change | touched files and boundaries are recorded |
 | Verification | fresh proof is collected |
 | Completion / handoff | summary and open risks are recorded |
+
+The key interpretation rule is that only the verification row produces completion proof. The intake and completion/handoff rows may contain useful status language, but they are not substitutes for verification.
 
 ---
 
@@ -159,6 +170,18 @@ This checklist exists to prevent the evidence plan from remaining purely self-re
 - [ ] `oh-my-opencode.json` reflection decision is documented
 - [ ] future implementation package boundaries are documented
 - [ ] proposal docs and evidence docs are clearly separated
+- [ ] intake, readiness, status, and verification language are not collapsed together
+
+---
+
+## 7B. Behavior-shape scenario expectations
+
+The task-based scenario set should also reinforce the intended behavior boundaries.
+
+- an intake-oriented scenario should reward authority grounding and scope framing without rewarding premature completion claims
+- a `gb-review` scenario should reward the review lens that catches readiness/verification confusion
+- a `gb-doctor` scenario should reward readiness diagnosis without treating readiness as proof of completion
+- a `gb-share` scenario should reward status handoff structure that keeps completed, verified, and open items distinct
 
 ---
 

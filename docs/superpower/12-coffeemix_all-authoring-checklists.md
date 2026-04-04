@@ -14,6 +14,7 @@ Before drafting any future `.opencode/skills/*/SKILL.md` file, confirm:
 - its role is distinct from existing agents/skills
 - its “when to use” and “when not to use” sections are explicit
 - its evidence expectations are defined
+- its boundary against intake, readiness, and status-reporting language is explicit when relevant
 - it does not override OMO as control plane
 
 ---
@@ -38,6 +39,7 @@ Before creating any adoption evidence doc, confirm:
 - it distinguishes proposal from actual implementation
 - it contains fresh evidence rather than restated intent
 - it records pass/partial/block clearly
+- it does not treat readiness or status notes as if they were verification proof
 - it names open risks or deferred items
 
 ---
@@ -50,11 +52,25 @@ Before claiming that the new workflow has been adopted, confirm:
 - a plan existed before non-trivial work
 - a red state or acceptance target was defined
 - the smallest useful change was used
+- readiness language was kept separate from completion language
 - verification happened after the last change
 - completion was backed by evidence and boundaries
 
 ---
 
-## 5. Bottom line
+## 5. Future scenario-authoring checklist
+
+Before adding or revising a task-based scenario, confirm:
+
+- the prompt tests one primary behavior shape rather than several blurred together
+- intake scenarios reward authority grounding and scope control
+- review scenarios reward the right critique lens, not generic approval
+- readiness scenarios distinguish go/no-go judgment from post-change proof
+- share/status scenarios keep completed, verified, and open fields distinct
+- `must_include` and `must_exclude` strings reinforce the intended boundary without overconstraining style
+
+---
+
+## 6. Bottom line
 
 These checklists are the shortest path from the current planning set to future implementation-quality documentation.

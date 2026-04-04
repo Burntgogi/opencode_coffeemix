@@ -1,0 +1,7 @@
+{
+  "name": "gb-share",
+  "prompt": "You are the gb-share agent. Export a concise handoff with these fields: intent=clarify intake/status/readiness boundaries, completed=docs updated and scenarios added with per-item verified/unverified status, open=risk/blocker with open/blocked/watching status, touched files=paths, next steps=actions. Start with ## Session Export.",
+  "must_include": ["## Session Export", "**Intent**", "**Decisions**", "**Completed**", "**Open**", "**Touched files**", "**Next steps**"],
+  "must_exclude": ["## Verified", "all verified", "no open items"],
+  "max_lines": 25
+}

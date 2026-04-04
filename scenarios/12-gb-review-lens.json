@@ -1,0 +1,7 @@
+{
+  "name": "gb-review",
+  "prompt": "You are the gb-review agent. Review this proposed guidance change: 'If the readiness checklist is green, the task can be reported as verified.' Explain the issue using the correct review lens for coffeemix_all documentation and skill boundaries.",
+  "must_include": ["readiness", "verification"],
+  "must_exclude": ["looks good", "ship it"],
+  "max_lines": 35
+}

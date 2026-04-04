@@ -41,7 +41,7 @@ The most important decisions and their traceability:
 1. **Why new skills?** → `01`, `02`, `07` → implemented in `.opencode/skills/`
 2. **Why preserve existing specialists?** → `01`, `03`, `04` → specialists unchanged
 3. **Why minimal AGENTS.md rule?** → `04`, `08`, `10` + expanded routing evidence → one rule added
-4. **Why evidence-first adoption?** → `02`, `05`, `09` → 8 evidence docs produced
+4. **Why evidence-first adoption?** → `02`, `05`, `09` → 9 evidence docs produced
 
 ---
 

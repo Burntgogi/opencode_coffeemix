@@ -8,6 +8,7 @@
 - [`coffeemix_all-structure-self-check-prompt.md`](./coffeemix_all-structure-self-check-prompt.md)
 - [`integration-guide-self-audit-prompt.md`](./integration-guide-self-audit-prompt.md)
 - [`session-wrapup-phase1.md`](./session-wrapup-phase1.md)
+- [`coffeemix_all-current-workflow-and-structure.md`](./coffeemix_all-current-workflow-and-structure.md) —current-state workflow and structure snapshot
 
 ## Evidence docs
 

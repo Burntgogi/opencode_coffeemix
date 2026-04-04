@@ -40,7 +40,7 @@ Evaluation results:
 
 Evidence docs produced:
 
-- `evidence-pilot-01-tdd-index-alignment.md` —- `evidence-pilot-02-verification-rollout-proof.md` —- `evidence-pilot-03-debugging-state-alignment.md` —- `evidence-large-task-01-state-reconciliation.md` —- `evidence-large-task-02-authority-reflection-decision.md` —- `evidence-routing-expansion.md` —- `evidence-brainstorming-evaluation.md` —- `evidence-final-consolidated-summary.md` —
+- `evidence-pilot-01-tdd-index-alignment.md` —- `evidence-pilot-02-verification-rollout-proof.md` —- `evidence-pilot-03-debugging-state-alignment.md` —- `evidence-large-task-01-state-reconciliation.md` —- `evidence-large-task-02-authority-reflection-decision.md` —- `evidence-phase-1-2-cleanup.md` —- `evidence-phase-a-d-refactoring.md` —- `evidence-brainstorming-evaluation.md` —- `evidence-final-consolidated-summary.md` —
 ---
 
 ## 3. Explicit first-wave scope
@@ -87,5 +87,5 @@ That surface has now been delivered:
 
 - 3 discipline skills implemented
 - 1 minimal AGENTS.md rule added
-- 8 evidence documents produced
+- 9 evidence documents produced
 - oh-my-opencode.json remains unchanged

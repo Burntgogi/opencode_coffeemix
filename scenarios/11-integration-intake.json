@@ -1,0 +1,7 @@
+{
+  "name": "integration-intake",
+  "prompt": "You are handling coffeemix_all integration intake. The request is to align verification-before-completion, workflow, evidence-plan, and authoring-checklist docs with intake/status/readiness boundaries and to add matching task scenarios. Give an intake response that identifies the local authority files, names the scope boundary, and states the intended outcome without claiming the work is already verified.",
+  "must_include": ["authority", "scope", "outcome"],
+  "must_exclude": ["already verified", "task complete"],
+  "max_lines": 35
+}

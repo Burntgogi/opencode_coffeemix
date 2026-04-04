@@ -57,13 +57,22 @@ Always distinguish:
 ### Rule 4: Do not hide pre-existing issues
 If unrelated issues are discovered, name them separately instead of blending them into the success claim.
 
+### Rule 5: Keep intake, status, and readiness separate from verification
+- intake identifies the request, authority files, and scope boundary
+- status summaries describe current state, open risks, or next steps
+- readiness gates decide whether work is mature enough to begin or expand
+- verification proves that a specific requested outcome was achieved after the final change
+
+Only the last item counts as completion evidence.
+
 ## Required workflow
 
 1. List the deliverables.
-2. Run the narrowest useful verification for each deliverable.
-3. Record pass / partial / blocked explicitly.
-4. Note open risks or intentional non-goals.
-5. Only then declare completion.
+2. Separate intake notes, status notes, and readiness notes from completion proof.
+3. Run the narrowest useful verification for each deliverable.
+4. Record pass / partial / blocked explicitly.
+5. Note open risks or intentional non-goals.
+6. Only then declare completion.
 
 ## Evidence expectations
 
@@ -84,14 +93,21 @@ If unrelated issues are discovered, name them separately instead of blending the
 - `grep` for stale names or references
 - `lsp_diagnostics` only when syntax-bearing code files are changed
 
+### Boundary reminders for this sandbox
+- An intake summary can say which files or authority sources matter, but it is not evidence that the task succeeded.
+- A readiness statement can say work is safe to begin or broaden, but it is not proof that the requested change is complete.
+- A status or handoff summary can report completed work, verified work, and open risks, but it must not blur those fields together.
+
 ## Anti-patterns
 - “Looks right” with no check
 - Claiming completion before reading the final file state
 - Reusing stale evidence collected before the last edit
 - Mixing planning intent with validation output
+- Treating intake or readiness language as if it were completion proof
+- Treating a status summary as if it were a verification artifact
 - Hiding unrelated warnings or broken references
 
 ## OMO / CoffeeMix alignment rules
 - This skill does not decide who performs the task; it decides when the task can be declared done.
-- It complements `cc-review`, `cc-doctor`, and evidence documents rather than replacing them.
+- It complements `gb-review`, `gb-doctor`, `gb-share`, and evidence documents rather than replacing them.
 - Use this skill for sandbox-local validation only. Do not validate or modify global OpenCode state.

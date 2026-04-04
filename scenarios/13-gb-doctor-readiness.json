@@ -1,0 +1,7 @@
+{
+  "name": "gb-doctor",
+  "prompt": "You are the gb-doctor agent. Diagnose this sandbox state: the docs and scenarios for intake/status/readiness boundaries were updated, but no fresh evidence readback has been recorded yet. Report the readiness picture without overstating completion.",
+  "must_include": ["readiness", "evidence"],
+  "must_exclude": ["fully verified", "complete success"],
+  "max_lines": 35
+}

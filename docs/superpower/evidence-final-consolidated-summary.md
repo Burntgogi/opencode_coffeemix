@@ -17,8 +17,9 @@
 - `evidence-large-task-01-state-reconciliation.md` — state surfaces reconciled across 5 files
 - `evidence-large-task-02-authority-reflection-decision.md` — authority decision backed by expanded routing/runtime evidence
 
-### Routing expansion evidence
-- `evidence-routing-expansion.md` — routing expanded from 7 to 14 specialists, 28 scenarios all PASS
+### Cleanup and refactoring evidence
+- `evidence-phase-1-2-cleanup.md` — stale docs and evidence inventory repaired across the rollout set
+- `evidence-phase-a-d-refactoring.md` — cleanup, harness extraction, docs consolidation, and routing evidence merge recorded
 
 ### Brainstorming evaluation evidence
 - `evidence-brainstorming-evaluation.md` — brainstorming skill evaluated and deferred
@@ -68,12 +69,12 @@
 | Component | Status | Evidence |
 |---|---|---|
 | 3 new local skills | Implemented | rollout record + 3 pilot evidence docs |
-| Routing validation | 14 specialists, 28 scenarios PASS | routing expansion evidence |
+| Routing validation | 14 specialists, 28 scenarios PASS | routing validation evidence |
 | AGENTS.md | Minimal discipline rule added | authority reflection judgment |
 | oh-my-opencode.json | Unchanged | authority reflection judgment |
 | brainstorming skill | Deferred | brainstorming evaluation |
 | Runtime validation | Regenerated and passing | smoke/e2e reports |
-| State surfaces | Reconciled to 01~18 + evidence | state reconciliation evidence |
+| State surfaces | Reconciled to 01~19 + evidence | state reconciliation evidence |
 
 ---
 
@@ -103,4 +104,4 @@ The coffeemix_all sandbox now has:
 - 1 minimal AGENTS.md discipline rule
 - 1 deferred skill decision (brainstorming)
 - 1 unchanged authority file (oh-my-opencode.json)
-- Full evidence trail across 8 evidence documents
+- Full evidence trail across 9 evidence documents

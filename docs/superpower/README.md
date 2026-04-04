@@ -29,7 +29,8 @@
 - [`evidence-pilot-03-debugging-state-alignment.md`](./evidence-pilot-03-debugging-state-alignment.md)
 - [`evidence-large-task-01-state-reconciliation.md`](./evidence-large-task-01-state-reconciliation.md)
 - [`evidence-large-task-02-authority-reflection-decision.md`](./evidence-large-task-02-authority-reflection-decision.md)
-- [`evidence-routing-expansion.md`](./evidence-routing-expansion.md)
+- [`evidence-phase-1-2-cleanup.md`](./evidence-phase-1-2-cleanup.md)
+- [`evidence-phase-a-d-refactoring.md`](./evidence-phase-a-d-refactoring.md)
 - [`evidence-brainstorming-evaluation.md`](./evidence-brainstorming-evaluation.md)
 - [`evidence-final-consolidated-summary.md`](./evidence-final-consolidated-summary.md)
 
@@ -44,6 +45,6 @@ This folder is the ordered planning, adoption, and evidence set for the `coffeem
 - `19` records the brainstorming skill evaluation (evaluated and deferred)
 - `evidence-pilot-01~03` record real sandbox-local pilot usage of the new skills
 - `evidence-large-task-01~02` record multi-file task evidence
-- `evidence-routing-expansion` records routing expansion to 14 specialists
+- `evidence-phase-1-2-cleanup` and `evidence-phase-a-d-refactoring` record cleanup, refactoring, and evidence-layer maintenance
 - `evidence-brainstorming-evaluation` records the brainstorming skill decision
 - `evidence-final-consolidated-summary` is the consolidated evidence summary

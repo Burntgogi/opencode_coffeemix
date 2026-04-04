@@ -59,18 +59,24 @@ Do not use this as a heavy process for one-line trivial corrections.
 1. read the relevant local files,
 2. identify which existing doc or file already owns the topic,
 3. classify the task as trivial or non-trivial,
-4. identify whether the work is documentation-only or future implementation.
+4. identify whether the work is documentation-only or future implementation,
+5. route Claude-derived integration proposals to `integration-intake`.
 
 ### Outputs
 
 - clear task framing,
 - known source files,
-- scope boundary.
+- scope boundary,
+- initial status snapshot if needed.
 
 ### Evidence
 
 - file paths inspected,
 - explicit statement of scope.
+
+### Boundary note
+
+Stage A may produce intake framing and current-state notes, but it does not establish readiness and it does not count as verification.
 
 ---
 
@@ -95,6 +101,10 @@ Do not use this as a heavy process for one-line trivial corrections.
 
 - plan artifact or plan summary,
 - explicit mention of expected deliverables.
+
+### Boundary note
+
+The planning gate can support a later readiness judgment, but it still does not prove that the requested change succeeded.
 
 ---
 
@@ -149,6 +159,13 @@ Do not use this as a heavy process for one-line trivial corrections.
 
 **Purpose**: prove the result after the final change.
 
+Verification is intentionally narrower than intake, status reporting, or readiness review.
+
+- intake asks what should be touched and which authority files matter,
+- status reporting says what is currently done, verified, or still open,
+- readiness asks whether broader work should start or expand,
+- verification proves the requested deliverable now matches the target.
+
 ### Actions
 
 1. verify the deliverables exist,
@@ -186,6 +203,8 @@ Do not use this as a heavy process for one-line trivial corrections.
 - completion summary,
 - next-step orientation.
 
+The handoff may include a status summary, but that summary should reflect Stage E evidence rather than replace it.
+
 ### Evidence
 
 - completion block,
@@ -218,7 +237,8 @@ Escalate the task to stronger planning/review behavior when:
 - file existence,
 - headings and structure,
 - internal cross-links,
-- consistency with source docs.
+- consistency with source docs,
+- no confusion between intake notes, readiness notes, and completion proof.
 
 ### Skill or agent definition work
 
@@ -261,5 +281,7 @@ This workflow does not:
 This workflow turns the master plan into a repeatable path:
 
 **intake → plan → define red state → make smallest useful change → verify → hand off**
+
+In that sequence, intake frames the work, readiness gates whether it should proceed, status summarizes its state, and verification alone proves completion.
 
 That is the practical form of superpowers-style discipline in this sandbox.

@@ -37,6 +37,8 @@ You are the context compaction specialist.
 
 **Original intent**: [what the user asked for]
 
+**Session status**: [active | blocked | ready for handoff]
+
 **Current plan**:
 - [ ] Step 1: ...
 - [x] Step 2: ... (verified)
@@ -48,11 +50,16 @@ You are the context compaction specialist.
 **Open risks**:
 - [risk] — [status]
 
+**Blocker**:
+- [none | current blocking issue]
+
 **Active delegations**:
 - [task_id]: [description] — [status]
 
 **Key decisions**:
 - [decision] because [reason]
+
+**Next step**: [single best next action]
 
 **Context to restore**: [specific files/patterns to re-read]
 ```
@@ -62,3 +69,4 @@ You are the context compaction specialist.
 - Always note what was dropped and why
 - Always provide "context to restore"
 - If the user says "don't compact", respect it
+- Keep status, blocker, and next step brief so the compacted summary stays restore-friendly

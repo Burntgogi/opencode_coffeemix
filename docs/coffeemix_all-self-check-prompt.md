@@ -1,10 +1,10 @@
 # coffeemix_all Self-Check Prompt
 
-?�드박스 진입 —?�는 ?�업 ?�작 — ?�음 ?�롬?�트�—�행?�여 ?�재 ?�태�—��—�니—
+샌드박스 진입 또는 작업 시작 전에 아래 프롬프트를 실행하여 현재 상태를 확인한다.
 
 ---
 
-## ?��——�롬?�트
+## 프롬프트
 
 ```
 You are the coffeemix_all sandbox self-check agent.
@@ -23,8 +23,9 @@ Perform a complete health check of this workspace by reading actual files —do 
 
 ### 3. Specialist Inventory
 - List all files in `.opencode/agents/` —should be 14 gb-* specialists
-- List all files in `.opencode/skills/` —should be 7 skills:
+- List all files in `.opencode/skills/` —should be 8 skills:
   - ask-user-question, compact-context, enter-plan-mode, tool-search (existing)
+  - integration-intake (adoption gate)
   - systematic-debugging, test-driven-development, verification-before-completion (discipline)
 
 ### 4. Routing Rules
@@ -39,7 +40,7 @@ Perform a complete health check of this workspace by reading actual files —do 
 
 ### 6. Documentation Set
 - List `docs/superpower/` —should contain 01~19 numbered docs + README + evidence docs
-- Confirm `docs/superpower/README.md` lists all 19 docs + 8 evidence docs
+- Confirm `docs/superpower/README.md` lists all 19 docs + 9 evidence docs
 
 ### 7. Discipline Skills
 - Read `.opencode/skills/test-driven-development/SKILL.md`: confirm red/green state rules exist
@@ -62,14 +63,14 @@ Return a concise report:
 | Workspace Identity | ——| [detail] |
 | Core Config | ——| [detail] |
 | Specialists (14) | ——| [count] |
-| Skills (7) | ——| [list] |
+| Skills (8) | ——| [list] |
 | Routing Rules (6) | ——| [detail] |
 | Validation Harness | ——| [detail] |
 | Documentation Set | ——| [count] |
 | Discipline Skills | ——| [detail] |
 | Git State | ——| [detail] |
 
-Overall: ?�� Healthy / ?�� Warnings / ?�� Issues
+Overall: 🟢 Healthy / 🟡 Warnings / 🔴 Issues
 ```
 
 If any check fails, list the specific issue and recommend a fix.
@@ -77,11 +78,14 @@ If any check fails, list the specific issue and recommend a fix.
 
 ---
 
-## ?�용 방법
+## 사용 방법
 
-1. **?�드박스 진입 —*: `open-sandbox-opencode.cmd` ?�행 —OpenCode TUI ?�작 ——?�롬?�트 붙여?�기
-2. **PowerShell 진입 —*: `.\enter-sandbox.ps1` ?�행 —`opencode run`?�로 —?�롬?�트 ?�달
-3. **?�동—*: ?�후 `tools/self_check_runner.py`�—�동—가—
-## ?��? 주기
+1. **샌드박스 진입**: `open-sandbox-opencode.cmd` 실행 후 OpenCode TUI에서 프롬프트를 붙여 넣는다.
+2. **PowerShell 진입**: `.\enter-sandbox.ps1` 실행 후 `opencode run`으로 프롬프트를 전달한다.
+3. **자동 점검**: 필요 시 `tools/sandbox_smoke_runner.py`, `tools/sandbox_e2e_runner.py`, `tools/routing_validation_runner.py` 중 목적에 맞는 러너를 실행한다.
 
-- ?�드박스 최초 진입 —- 주요 변�—�업 —- ?�션 ?�개 —(`gb-resume`?� ?�계)
+## 사용 주기
+
+- 샌드박스 최초 진입 시
+- 주요 변경 작업 전후
+- 세션 재개 시 (`gb-resume` 연계)
