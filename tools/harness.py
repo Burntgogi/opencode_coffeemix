@@ -20,8 +20,10 @@ from typing import Any
 
 # Cross-platform fallback: try common OpenCode install locations
 _DEFAULT_OPENCODE_PATHS = [
-    r"C:\Users\JMTFAM01\AppData\Roaming\npm\opencode.cmd",
+    os.path.expandvars(r"C:\Users\%USERNAME%\AppData\Roaming\npm\opencode.cmd"),
     r"C:\Program Files\nodejs\opencode.cmd",
+    "/usr/local/bin/opencode",
+    "/usr/bin/opencode",
 ]
 
 

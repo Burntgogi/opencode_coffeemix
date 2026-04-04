@@ -58,7 +58,7 @@ def main() -> None:
             ROOT / "opencode.json",
             ROOT / "oh-my-opencode.json",
             ROOT / "AGENTS.md",
-            ROOT / ".opencode" / "package.json",
+            ROOT / "package.json",
             ROOT / ".opencode" / "agents",
             ROOT / ".opencode" / "skills",
             ROOT / "docs",
@@ -67,16 +67,16 @@ def main() -> None:
         "scenarios": run_scenarios(),
     }
 
-    write_json_report(REPORTS / "sandbox-e2e-results.json", payload)
+    write_json_report(REPORTS / "workspace-e2e-results.json", payload)
 
-    lines = ["# Sandbox E2E Report", "", f"Workspace: `{ROOT}`", ""]
+    lines = ["# Workspace E2E Report", "", f"Workspace: `{ROOT}`", ""]
     lines.extend(format_file_check_report(payload["files"]))
     lines.append("## Inventory")
     lines.append(f"- {'PASS' if payload['inventory']['agent_ok'] else 'FAIL'} agents visible")
     lines.append(f"- {'PASS' if payload['inventory']['skill_ok'] else 'FAIL'} skills visible")
     lines.append("")
     lines.extend(format_scenario_report(payload["scenarios"], detailed=True))
-    write_md_report(REPORTS / "sandbox-e2e-report.md", lines)
+    write_md_report(REPORTS / "workspace-e2e-report.md", lines)
 
 
 if __name__ == "__main__":

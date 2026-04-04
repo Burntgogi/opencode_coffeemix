@@ -60,7 +60,7 @@ def main() -> None:
         ROOT / "opencode.json",
         ROOT / "oh-my-opencode.json",
         ROOT / "AGENTS.md",
-        ROOT / ".opencode" / "package.json",
+        ROOT / "package.json",
         ROOT / ".opencode" / "agents",
         ROOT / ".opencode" / "skills",
     ])
@@ -73,12 +73,12 @@ def main() -> None:
         "scenarios": scenarios,
     }
 
-    write_json_report(REPORTS / "sandbox-smoke-results.json", payload)
+    write_json_report(REPORTS / "workspace-smoke-results.json", payload)
 
-    lines = ["# Sandbox Smoke Report", "", f"Workspace: `{ROOT}`", ""]
+    lines = ["# Workspace Smoke Report", "", f"Workspace: `{ROOT}`", ""]
     lines.extend(format_file_check_report(files))
     lines.extend(format_scenario_report(scenarios))
-    write_md_report(REPORTS / "sandbox-smoke-report.md", lines)
+    write_md_report(REPORTS / "workspace-smoke-report.md", lines)
 
 
 if __name__ == "__main__":
