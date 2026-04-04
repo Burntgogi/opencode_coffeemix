@@ -1,6 +1,6 @@
 # Public Packaging Plan — opencode_coffeemix_all_0_1
 
-**Workspace:** `C:\Work\claude_pickup\opencode_coffeemix_all_0_1`
+**Workspace:** `opencode_coffeemix_all_0_1`
 **Purpose:** classify every top-level file and directory for public release readiness.
 
 ---
