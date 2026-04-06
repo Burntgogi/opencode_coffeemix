@@ -98,6 +98,8 @@ python tools/routing_validation_runner.py
 
 이 프로젝트는 AI 에이전트 생태계의 다른 작업물들을 기반으로 합니다:
 
+- **[OpenCode](https://github.com/opencode-ai/opencode)** — 이 전체 워크스페이스를 구동하는 터미널 기반 AI 코딩 에이전트 런타임입니다. OpenCode는 실행 셸, 도구 시스템, 플러그인 아키텍처를 제공하여 coffeemix_all의 에이전트와 스킬이 실행될 수 있게 합니다. OpenCode의 개방적이고 확장 가능한 설계가 없었다면 이 계층화된 전문 에이전트 시스템은 존재할 수 없었습니다.
+- **[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent)** — OpenCode와 coffeemix_all 사이에 위치하는 다중 에이전트 오케스트레이션 플러그인입니다. 모델 라우팅, 폴백 체인, 에이전트 레지스트리, 카테고리 시스템을 제공하여 gb-* 전문 에이전트가 자동으로 선택·배치될 수 있게 합니다. 또한 `install` 커맨드는 전역 설치 스크립트의 자동 모델 매핑 기능의 참조 모델이 되었습니다.
 - **[obra/superpowers](https://github.com/obra/superpowers)** — 8개 로컬 디서플린 스킬(`ask-user-question`, `compact-context`, `enter-plan-mode`, `systematic-debugging`, `test-driven-development`, `tool-search`, `verification-before-completion`, `integration-intake`)은 이 프로젝트의 스킬 패턴과 워크플로우 게이트 개념에서 차용했습니다.
 - **[garrytan/gstack](https://github.com/garrytan/gstack)** — 다중 에이전트 라우팅 아키텍처와 전문 에이전트 계층화 개념(작업이 일치할 때 일반 에이전트보다 좁은 범위의 전문 에이전트를 우선)은 이 프로젝트의 에이전트 오케스트레이션 패턴에서 영감을 받았습니다.
 

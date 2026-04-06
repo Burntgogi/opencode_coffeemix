@@ -87,6 +87,8 @@ Reports are written to `reports/` (gitignored).
 
 This project builds on the work of others in the AI agent ecosystem. We are grateful to:
 
+- **[OpenCode](https://github.com/opencode-ai/opencode)** — The terminal-based AI coding agent runtime that powers this entire workspace. OpenCode provides the execution shell, tool system, and plugin architecture that make coffeemix_all agents and skills runnable. Without OpenCode's open, extensible design, this layered specialist system would not be possible.
+- **[oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent)** — The multi-agent orchestration plugin that sits between OpenCode and coffeemix_all. It provides the model routing, fallback chain, agent registry, and category system that enable gb-* specialists to be selected and dispatched automatically. Its `install` command also served as the reference model for our global installer's automatic model mapping.
 - **[obra/superpowers](https://github.com/obra/superpowers)** — The 8 local discipline skills (`ask-user-question`, `compact-context`, `enter-plan-mode`, `systematic-debugging`, `test-driven-development`, `tool-search`, `verification-before-completion`, `integration-intake`) were adapted from this project's skill patterns and workflow gate concepts.
 - **[garrytan/gstack](https://github.com/garrytan/gstack)** — The multi-agent routing architecture and specialist layering concept (prefer narrow-scope specialists over general agents when tasks match) was inspired by this project's agent orchestration patterns.
 
