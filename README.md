@@ -1,5 +1,13 @@
 # coffeemix_all
 
+<div align="center">
+
+**Language:** English | [한국어](./README.ko.md)
+
+</div>
+
+---
+
 An OpenCode + OMO workspace with a layered specialist system for workflow, routing, and validation.
 
 ## Prerequisites
