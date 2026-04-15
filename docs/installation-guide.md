@@ -51,6 +51,12 @@ The installer automatically assigns models to gb-* agents using the same strateg
 
 3. **Placeholder** — If neither exists, uses `YOUR_PROVIDER/YOUR_MODEL` for manual configuration.
 
+> **Unresolved placeholders**: If `YOUR_PROVIDER/YOUR_MODEL` remains in `oh-my-opencode.json` after install, the `gb-*` agents will fail to launch until you replace every occurrence with a real provider/model string (e.g. `openai/gpt-4o` or `anthropic/claude-sonnet-4-5`). Run a quick search after install to confirm no placeholders remain:
+> ```powershell
+> Select-String -Path "$env:USERPROFILE\.config\opencode\oh-my-opencode.json" -Pattern "YOUR_PROVIDER"
+> ```
+> If matches appear, edit the file and substitute the correct model for each `gb-*` agent before first use.
+
 **Safe to re-run**: The installer skips files that already exist and only merges new entries.
 
 ### Preview Mode
@@ -123,6 +129,8 @@ Copy these files from the coffeemix_all package into your project:
 | `opencode.json` | `<your-project>/opencode.json` | **Merge** the `oh-my-openagent` plugin entry if not already present. Do NOT copy the provider section. |
 | `tui.json` | `<your-project>/tui.json` | **Append** the coffeemix_all badge plugin to your existing plugin array. |
 
+> **`oh-my-opencode.json` is a template/merge source, not a drop-in config.** The copy shipped in the package contains `YOUR_PROVIDER/YOUR_MODEL` placeholders and acts as a structural reference for agent definitions and category layout. Never copy it verbatim over your own file — doing so would erase your existing model assignments and provider config. Always merge selectively, adding only the missing `gb-*` entries while keeping your own provider and model values intact.
+
 ---
 
 ## Post-Install Verification
@@ -138,6 +146,8 @@ python tools/routing_validation_runner.py
 ```
 
 Reports are written to `reports/` (gitignored).
+
+> **`reports/` is ephemeral local output.** The directory is gitignored and contains only the results of your most recent validation run. It is not part of the package and should not be committed or shipped. If you clone the project on a new machine or hand off to a colleague, run the harness again to regenerate a fresh `reports/` for that environment.
 
 ---
 

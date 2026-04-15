@@ -1,6 +1,16 @@
 # coffeemix_all
 
-OpenCode + OMO를 위한 전문화 에이전트 시스템 — 워크플로우, 라우팅, 검증이 계층화된 workspace입니다.
+<div align="center">
+
+<img src="./assets/coffeemix-logo.svg" alt="coffeemix_all — 달콤한 것만 모아 담은 커피 한 잔" width="280" />
+
+**언어:** [English](./README.md) | 한국어
+
+</div>
+
+---
+
+coffeemix_all은 OpenCode + OMO에 설치하는 CoffeeMix 확장 팩으로, 전문 에이전트, 로컬 스킬, 검증 도구, 설치 가이드를 함께 제공합니다.
 
 ## 필수 요구사항
 
@@ -43,7 +53,6 @@ coffeemix_all은 다음을 제공합니다:
 | `routing-scenarios/` | ID-프롬프트 라우팅 검증 (28개 시나리오 × 14개 에이전트) |
 | `tools/` | 검증 하니스 및 러너 |
 | `docs/` | 설치 가이드 및 아키텍처 문서 |
-| `archive/` | 내부 계획 이력 및 증거 문서 |
 
 ## 스킬
 
