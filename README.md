@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="./assets/coffeemix-logo.svg" alt="coffeemix_all — a coffee cup brimming with sweets: only the sweet parts, gathered together" width="280" />
+
 **Language:** English | [한국어](./README.ko.md)
 
 </div>
@@ -51,7 +53,6 @@ coffeemix_all provides:
 | `routing-scenarios/` | Identity-prompt routing validation (28 scenarios × 14 specialists) |
 | `tools/` | Validation harness and runners |
 | `docs/` | Public-facing guides and architecture reference |
-| `archive/` | Internal planning history and evidence docs |
 
 ## Skills
 
