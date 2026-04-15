@@ -52,7 +52,7 @@ coffeemix_all은 다음을 제공합니다:
 | `scenarios/` | 작업 기반 행동 시나리오 |
 | `routing-scenarios/` | ID-프롬프트 라우팅 검증 (28개 시나리오 × 14개 에이전트) |
 | `tools/` | 검증 하니스 및 러너 |
-| `docs/` | 설치 가이드 및 아키텍처 문서 |
+| `docs/` | 설치 가이드, 아키텍처 문서, [릴리스 노트](./docs/RELEASE_NOTES.ko.md) |
 
 ## 스킬
 
