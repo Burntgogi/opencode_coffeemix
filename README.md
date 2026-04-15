@@ -52,7 +52,7 @@ coffeemix_all provides:
 | `scenarios/` | Task-based behavior scenarios |
 | `routing-scenarios/` | Identity-prompt routing validation (28 scenarios × 14 specialists) |
 | `tools/` | Validation harness and runners |
-| `docs/` | Public-facing guides and architecture reference |
+| `docs/` | Public-facing guides, architecture reference, and [release notes](./docs/RELEASE_NOTES.md) |
 
 ## Skills
 
