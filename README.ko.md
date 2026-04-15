@@ -10,7 +10,7 @@
 
 ---
 
-OpenCode + OMO를 위한 전문화 에이전트 시스템 — 워크플로우, 라우팅, 검증이 계층화된 workspace입니다.
+coffeemix_all은 OpenCode + OMO에 설치하는 CoffeeMix 확장 팩으로, 전문 에이전트, 로컬 스킬, 검증 도구, 설치 가이드를 함께 제공합니다.
 
 ## 필수 요구사항
 

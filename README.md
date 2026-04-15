@@ -10,7 +10,7 @@
 
 ---
 
-An OpenCode + OMO workspace with a layered specialist system for workflow, routing, and validation.
+An installable CoffeeMix extension pack for OpenCode + OMO, bundling specialist agents, local skills, validation tooling, and setup guidance.
 
 ## Prerequisites
 
