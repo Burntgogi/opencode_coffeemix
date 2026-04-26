@@ -1,203 +1,108 @@
-# coffeemix_all Installation Guide
+﻿# Installation Guide — coffeemix_all 0.2
 
-## Prerequisites
+## 1. Scope
 
-Before installing coffeemix_all, make sure you have:
+OMO / oh-my-openagent must already be installed. This package does not install OMO and does not replace OMO orchestration, routing, model routing, skill loading, provider setup, or baseline agents.
 
-- [OpenCode](https://github.com/opencode-ai/opencode) installed and working
-- [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) installed as an OpenCode plugin (`npm install -g oh-my-opencode`)
-- Your own provider configuration set up in OpenCode (API keys, local models, etc.)
+Use this guide for a fresh CoffeeMix 0.2 install. If CoffeeMix 0.1 is already installed in your global OpenCode config, follow [`UPDATE.md`](./UPDATE.md) instead.
 
-## Installation Modes
+## 2. Fresh install path
 
-coffeemix_all supports two installation modes. Choose the one that fits your workflow:
+The default installer path is additive and skip-only. It copies missing CoffeeMix 0.2 files into the target OpenCode config and keeps existing files.
 
-| Mode | Scope | Use when |
-|------|-------|----------|
-| **Global** | System-wide (`%USERPROFILE%\.config\opencode\`) | You want coffeemix_all agents available in every OpenCode session |
-| **Project-local** | Single project root | You want coffeemix_all only in specific projects |
-
----
-
-## A. Global Installation (Recommended)
-
-### Quick Install
-
-Run the included PowerShell installer from the package directory:
-
-```powershell
-cd C:\path\to\coffeemix_all_0_1
-.\install-global.ps1
-```
-
-The installer will:
-1. Copy 14 `gb-*` specialist agents to `%USERPROFILE%\.config\opencode\agents\`
-2. Copy 8 workflow skills to `%USERPROFILE%\.config\opencode\skills\`
-3. Copy the badge plugin to `%USERPROFILE%\.config\opencode\plugins\`
-4. Copy `AGENTS.md` and `tui.json` to the global config directory
-5. Merge the `oh-my-openagent` plugin entry into your global `opencode.json`
-6. Merge all `gb-*` agent definitions into your global `oh-my-opencode.json` with **automatic model mapping**
-
-### Automatic Model Mapping
-
-The installer automatically assigns models to gb-* agents using the same strategy as OMO:
-
-1. **Existing OMO config** — If `oh-my-opencode.json` already has model mappings (from `bunx oh-my-opencode install`), the installer copies those assignments to matching gb-* agents by role:
-   - `high` variant → oracle/momus model (e.g., `openai/gpt-5.4`)
-   - `medium` variant → prometheus/metis model
-   - `fast` variant → librarian/explore model
-
-2. **Provider scan** — If no OMO config exists, reads your `opencode.json` provider section and assigns the first available model to all gb-* agents.
-
-3. **Placeholder** — If neither exists, uses `YOUR_PROVIDER/YOUR_MODEL` for manual configuration.
-
-> **Unresolved placeholders**: If `YOUR_PROVIDER/YOUR_MODEL` remains in `oh-my-opencode.json` after install, the `gb-*` agents will fail to launch until you replace every occurrence with a real provider/model string (e.g. `openai/gpt-4o` or `anthropic/claude-sonnet-4-5`). Run a quick search after install to confirm no placeholders remain:
-> ```powershell
-> Select-String -Path "$env:USERPROFILE\.config\opencode\oh-my-opencode.json" -Pattern "YOUR_PROVIDER"
-> ```
-> If matches appear, edit the file and substitute the correct model for each `gb-*` agent before first use.
-
-**Safe to re-run**: The installer skips files that already exist and only merges new entries.
-
-### Preview Mode
-
-To see what would be installed without making changes:
+Always preview first:
 
 ```powershell
 .\install-global.ps1 -WhatIf
 ```
 
-### Placeholder-Only Mode
-
-To install with `YOUR_PROVIDER/YOUR_MODEL` placeholders (skip auto-detection):
+For safe mock validation, point `-ConfigDir` at a mock OpenCode config directory:
 
 ```powershell
-.\install-global.ps1 -PlaceholderOnly
+$mock = "C:\temp\coffeemix-0-2-opencode-config"
+New-Item -ItemType Directory -Force -Path $mock | Out-Null
+Copy-Item "$env:USERPROFILE\.config\opencode\oh-my-opencode.json" $mock -ErrorAction SilentlyContinue
+
+.\install-global.ps1 -WhatIf -ConfigDir $mock
 ```
 
-### Manual Global Install
+The mock directory must look like an OpenCode config directory. It should contain `oh-my-opencode.json` or `oh-my-openagent.json` so OMO detection can pass. It should not be the CoffeeMix package directory.
 
-If you prefer to install manually, copy these files to `%USERPROFILE%\.config\opencode\`:
-
-| Source | Destination | Purpose |
-|--------|-------------|---------|
-| `.opencode/agents/gb-*.md` | `%USERPROFILE%\.config\opencode\agents\` | 14 `gb-*` specialist prompts |
-| `.opencode/skills/*/` | `%USERPROFILE%\.config\opencode\skills\` | 8 local workflow skills |
-| `.opencode/plugins/*.tsx` | `%USERPROFILE%\.config\opencode\plugins\` | UI badge plugin |
-| `AGENTS.md` | `%USERPROFILE%\.config\opencode\AGENTS.md` | Routing rules |
-| `tui.json` | `%USERPROFILE%\.config\opencode\tui.json` | Badge config |
-
-Then merge configuration files:
-
-- **`opencode.json`**: Ensure `"oh-my-openagent"` is in the `plugin` array
-- **`oh-my-opencode.json`**: Add all `gb-*` agent entries (see package file for reference)
-
----
-
-## B. Project-local Installation
-
-In your OpenCode + OMO project, ask the Sisyphus agent:
-
-> Apply the coffeemix_all workspace from the package to this project.
-
-Sisyphus will:
-1. Copy the relevant files into your project root
-2. Merge agent and category definitions into your existing `oh-my-opencode.json`
-3. Verify the installation with the validation harness
-
-### Manual Project-local Install
-
-Copy these files from the coffeemix_all package into your project:
-
-#### Required files
-
-| Source | Destination | Purpose |
-|--------|-------------|---------|
-| `AGENTS.md` | `<your-project>/AGENTS.md` | Workspace routing and rules |
-| `.opencode/agents/` | `<your-project>/.opencode/agents/` | 14 `gb-*` specialist prompts |
-| `.opencode/skills/` | `<your-project>/.opencode/skills/` | 8 local workflow skills |
-| `.opencode/plugins/` | `<your-project>/.opencode/plugins/` | UI badge plugin |
-| `scenarios/` | `<your-project>/scenarios/` | Task-based validation scenarios |
-| `routing-scenarios/` | `<your-project>/routing-scenarios/` | Routing validation scenarios |
-| `tools/` | `<your-project>/tools/` | Validation harness and runners |
-
-#### Configuration files (merge, do not overwrite)
-
-| Source | Your file | Action |
-|--------|-----------|--------|
-| `oh-my-opencode.json` | `<your-project>/oh-my-opencode.json` | **Merge** the `gb-*` agent entries and categories. Do NOT replace — your provider/model mappings take priority. |
-| `opencode.json` | `<your-project>/opencode.json` | **Merge** the `oh-my-openagent` plugin entry if not already present. Do NOT copy the provider section. |
-| `tui.json` | `<your-project>/tui.json` | **Append** the coffeemix_all badge plugin to your existing plugin array. |
-
-> **`oh-my-opencode.json` is a template/merge source, not a drop-in config.** The copy shipped in the package contains `YOUR_PROVIDER/YOUR_MODEL` placeholders and acts as a structural reference for agent definitions and category layout. Never copy it verbatim over your own file — doing so would erase your existing model assignments and provider config. Always merge selectively, adding only the missing `gb-*` entries while keeping your own provider and model values intact.
-
----
-
-## Post-Install Verification
-
-After installation, verify everything works:
+After reviewing the preview and backing up your real config, run the fresh install only if you are not trying to update old CoffeeMix files:
 
 ```powershell
-# 1. Restart OpenCode, then press Tab to check agent list
-# 2. Run the validation harness (project-local only):
+.\install-global.ps1
+```
+
+## 3. CoffeeMix 0.1 update path
+
+Do not use the default installer as an update path from CoffeeMix 0.1 to 0.2. The default path skips existing files, so old CoffeeMix content can remain active while the user thinks the update succeeded.
+
+Existing CoffeeMix users must use the explicit CoffeeMix-owned update mode documented in [`UPDATE.md`](./UPDATE.md):
+
+```powershell
+$backup = "$env:USERPROFILE\.config\opencode-backups\coffeemix-0-1-before-0-2"
+.\install-global.ps1 -WhatIf -UpdateCoffeeMix -BackupDir $backup
+.\install-global.ps1 -UpdateCoffeeMix -BackupDir $backup
+```
+
+If the installer you have does not list `-UpdateCoffeeMix` and `-BackupDir`, stop. Do not tell users that a plain install updates existing CoffeeMix 0.1 content.
+
+## 4. Merge semantics
+
+- The package adds CoffeeMix `gb-*` agents, local skills, plugin files, validation tools, and config scaffolding to an OpenCode config.
+- The default install keeps existing files and reports skips.
+- `-UpdateCoffeeMix` is the intended mode for replacing CoffeeMix-owned files only.
+- `-BackupDir` is required for safe replacement and rollback during update mode.
+- Existing OMO control plane files must not be removed or replaced.
+- Model/provider placeholders must be adjusted by the user to match local or global config.
+
+## 5. Rollback
+
+Before a real update, create a backup outside the active config directory:
+
+```powershell
+$config = "$env:USERPROFILE\.config\opencode"
+$backup = "$env:USERPROFILE\.config\opencode-backups\coffeemix-0-1-before-0-2"
+New-Item -ItemType Directory -Force -Path $backup | Out-Null
+Copy-Item -Recurse -Force "$config\*" $backup
+```
+
+To roll back:
+
+```powershell
+Copy-Item -Recurse -Force "$backup\*" $config
+```
+
+## 6. Post-install verification
+
+Check the target config after install or update:
+
+```powershell
+$config = "$env:USERPROFILE\.config\opencode"
+
+Test-Path "$config\oh-my-opencode.json"
+Test-Path "$config\agents\gb-review.md"
+Test-Path "$config\agents\gb-debug.md"
+Test-Path "$config\skills\verification-before-completion\SKILL.md"
+
+Get-Content "$config\oh-my-opencode.json" -Raw | ConvertFrom-Json | Out-Null
+if (Test-Path "$config\opencode.json") {
+  Get-Content "$config\opencode.json" -Raw | ConvertFrom-Json | Out-Null
+}
+```
+
+Package validation can also be run from the package root:
+
+```powershell
 python tools/workspace_smoke_runner.py
-python tools/workspace_e2e_runner.py
 python tools/routing_validation_runner.py
 ```
 
-Reports are written to `reports/` (gitignored).
+## 7. Prohibited claims
 
-> **`reports/` is ephemeral local output.** The directory is gitignored and contains only the results of your most recent validation run. It is not part of the package and should not be committed or shipped. If you clone the project on a new machine or hand off to a colleague, run the harness again to regenerate a fresh `reports/` for that environment.
-
----
-
-## What coffeemix_all Adds
-
-After installation, you gain:
-
-- **14 `gb-*` specialists** — review, debugging, planning, diagnostics, status, handoff, and more
-- **8 local skills** — planning gates, verification discipline, debugging workflow, adoption intake
-- **Validation harness** — scenario-based testing for behavior and routing (project-local)
-- **Routing rules** — `AGENTS.md` tells OMO to prefer `gb-*` specialists when tasks match
-
-## What coffeemix_all Does NOT Change
-
-- Your provider configuration (API keys, model choices, local models)
-- Your existing agents and categories
-- Your project's source code
-- Your OpenCode runtime settings
-
----
-
-## Troubleshooting
-
-### gb-* agents use wrong models
-
-The installer auto-detects models from your existing OMO config. To customize:
-
-1. Edit `%USERPROFILE%\.config\opencode\oh-my-opencode.json`
-2. Change the `model` value for each `gb-*` agent
-3. Or re-run `bunx oh-my-opencode install` to reset all model mappings
-
-### gb-* agents don't appear in Tab completion
-
-1. Confirm `AGENTS.md` exists in your project root (project-local) or `%USERPROFILE%\.config\opencode\` (global)
-2. Check that `oh-my-opencode.json` has all 14 `gb-*` agent entries
-3. Ensure the `oh-my-openagent` plugin is loaded in `opencode.json`
-4. Restart OpenCode to pick up config changes
-
-### Warning: "legacy package name oh-my-opencode"
-
-Update your `opencode.json` plugin array: change `"oh-my-opencode"` to `"oh-my-openagent"`.
-
-### Validation fails after install (project-local)
-
-1. Check that all `.opencode/agents/` and `.opencode/skills/` files were copied correctly
-2. Verify `oh-my-opencode.json` has all `gb-*` agent entries
-3. Run `python tools/workspace_smoke_runner.py` to see which specific checks fail
-
----
-
-## License
-
-See the repository root for license information.
+- Do not claim OMO replacement.
+- Do not claim copied router, model, or loader behavior.
+- Do not claim automatic CoffeeMix 0.1 update behavior through the default installer.
+- Do not claim default GBrain, browser, checkpoint, or design runtime support.
+- Broad runtime e2e is not required for package setup.

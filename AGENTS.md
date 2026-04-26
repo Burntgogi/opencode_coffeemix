@@ -1,60 +1,56 @@
-# coffeemix_all Workspace Rules
+﻿# coffeemix_all 0.2 Workspace Rules
 
-This workspace is the `coffeemix_all` OpenCode + OMO workspace with CoffeeMix layered on top.
+This workspace is `opencode_coffeemix_all_0_2`, the OpenCode + OMO workspace for coffeemix_all 0.2.
 
 ## Core rule
-OMO remains the control plane, but when a task matches a CoffeeMix specialist exactly, prefer the `gb-*` specialist over a broader baseline agent.
 
-## Prefer these CoffeeMix specialists first
-- `gb-review` for focused code review
-- `gb-debug` for bug/root-cause investigation
-- `gb-ultraplan` for phased architecture or migration planning
-- `gb-commit` for commit-message and staging guidance
-- `gb-worktree` for git worktree workflows
-- `gb-resume` for restoring interrupted work
-- `gb-doctor` for quick project diagnostics
-- `gb-memory` for durable session memory extraction
-- `gb-config` for config/effective-settings review
-- `gb-share` for concise handoff/export summaries
-- `gb-statusline` for quick workspace/project status summaries
-- `gb-teleport` for context switching between branches/worktrees/tasks
-- `gb-plugin` for plugin evaluation/management
-- `gb-compact` for compacting long context into a resumable summary
+OMO / oh-my-openagent remains the baseline control plane. Do not replace OMO orchestration, category routing, model routing, skill loading, MCP loading, baseline built-in skill stack, or global installation behavior from this package.
 
-## Baseline OMO agents still own broad work
-- `sisyphus`: orchestration and overall task steering
-- `oracle`: high-level reasoning when the problem exceeds a specialist task
-- `metis`: request interpretation and strategic framing
-- `prometheus` / `momus`: broad evaluation and critique
-- `librarian`: external docs and references
-- `explore`: codebase exploration
+## Install and update documentation rule
 
-## Routing rules
-1. If a task clearly matches a `gb-*` specialist, choose that specialist first.
-2. If a task is broad or mixed, Sisyphus may orchestrate multiple specialists.
-3. Do not answer inventory questions from memory if workspace files can be read.
-4. For workspace checks, prefer reading `oh-my-opencode.json`, `.opencode/agents/`, and `.opencode/skills/` directly.
-5. Treat this workspace as workspace-local; do not assume global config is authoritative here.
-6. For non-trivial workspace-local changes, apply the local discipline skills before declaring completion: define a red state with `test-driven-development`, collect fresh proof with `verification-before-completion`, and use `systematic-debugging` when the cause of a failure is unclear.
+Document fresh installs and CoffeeMix 0.1 to 0.2 updates as separate paths.
 
-## Specialist context
+- Fresh install uses the default installer path. It is additive and skip-only for existing files.
+- Existing CoffeeMix 0.1 users must use the explicit CoffeeMix-owned update mode with `-UpdateCoffeeMix` and `-BackupDir` once those installer flags are present.
+- Always document `-WhatIf` preview before a real install or update.
+- For mock validation, `-ConfigDir` must point at a mock OpenCode config directory that contains OMO config, not at the package root.
+- Update docs must include backup, rollback, post-update verification, and a warning that a plain install may leave old CoffeeMix 0.1 content in place.
+- Do not claim automatic CoffeeMix update behavior unless `install-global.ps1` supports it.
+- Documentation work must not touch global config, agents, skills, plugins, package payload files, or generated reports unless the user explicitly asks for that scope.
 
-All `gb-*` specialists share these workspace-level constraints:
-- Routing is governed by the rules in this file
-- Validation uses `tools/harness.py` + `scenarios/` + `routing-scenarios/`
-- When in doubt, prefer the smallest possible change
+## CoffeeMix-first precedence
 
-## Validation harness
+When a task exactly matches a CoffeeMix `gb-*` specialist, prefer that protected first-class `gb-*` agent before a broader baseline OMO agent. Broad orchestration still belongs to OMO baseline agents such as `sisyphus`, `oracle`, `metis`, `prometheus`, `momus`, `librarian`, and `explore`.
 
-This workspace includes a self-validation harness under `tools/`:
+## Protected gb-* specialists
 
-- `tools/harness.py` — shared runner module (subprocess execution, scenario evaluation, report writing)
-- `tools/workspace_smoke_runner.py` — smoke checks (file existence, inventory, subset scenarios)
-- `tools/workspace_e2e_runner.py` — full e2e validation (all scenarios, strict include/exclude/line checks)
-- `tools/routing_validation_runner.py` — routing validation (28 identity-prompt scenarios, 14 specialists)
+Keep all 14 `gb-*` specialists:
 
-When verifying workspace health or validating changes:
-- Run the appropriate runner instead of manual checks
-- Reports are written to `reports/` (gitignored)
-- Scenarios live in `scenarios/` (task-based) and `routing-scenarios/` (identity-prompt routing)
-- `OPENCODE_BIN` env var overrides the default path; fallback searches common locations
+- `gb-review`, `gb-debug`, `gb-ultraplan`, `gb-commit`, `gb-worktree`, `gb-resume`, `gb-doctor`, `gb-memory`, `gb-config`, `gb-share`, `gb-statusline`, `gb-teleport`, `gb-plugin`, `gb-compact`.
+
+Doc 21 refines boundaries but deletes none. Modification candidates are `gb-review`, `gb-debug`, `gb-ultraplan`, `gb-resume`, `gb-memory`, `gb-share`, `gb-config`, `gb-plugin`, and `gb-compact`. Keep-as-is candidates are `gb-commit`, `gb-worktree`, `gb-doctor`, `gb-statusline`, and `gb-teleport`.
+
+## Local skills and validation discipline
+
+Keep all 8 local skills and use them as workflow discipline, not duplicate agents:
+
+- `ask-user-question`, `compact-context`, `enter-plan-mode`, `integration-intake`, `systematic-debugging`, `test-driven-development`, `tool-search`, `verification-before-completion`.
+
+For non-trivial local changes, define a red state, make the smallest useful change, and collect fresh proof with targeted reads/searches or the local harness when safe.
+
+## superpowers / gstack attachment rule
+
+superpowers and gstack are upstream references, not replacement control planes. Attach only selective guidance/adapters that strengthen existing CoffeeMix workflows:
+
+- superpowers: workflow discipline, skill authoring habits, bootstrap documentation.
+- gstack: optional future adapter ideas for GBrain, browser, design, tool substrate, and checkpoint mode.
+
+Do not claim actual implementation of GBrain, shared browser/daemon, checkpoint mode, or design runtime in this package.
+
+## Explicit rejections
+
+Reject OMO replacement, copied router/model/loader logic, deprecated command shims, duplicate default agents, default checkpoint commits, `gb-*` deletion, and full superpowers/gstack parity claims.
+
+## Validation boundary
+
+Verify files inside this package only. Do not modify `opencode_coffeemix_all_0_1`, `opencode_coffeemix_all_0_2_SuperGstack`, `opencode_coffeemix_all_sandbox`, or global OMO config.
